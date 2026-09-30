@@ -1,0 +1,2574 @@
+<!DOCTYPE html>
+<html lang="en" data-tod="day">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>(function(){var t=localStorage.getItem('gg-tod'),s=['dawn','day','dusk','night'];if(t&&s.indexOf(t)!==-1)document.documentElement.setAttribute('data-tod',t);})()</script>
+<title>Grammar Gate — Learn English, from first words to fluent</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600&family=DM+Serif+Display:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  :root {
+    --font-display: "Playfair Display", Georgia, serif;
+    --font-ui: "Hanken Grotesk", system-ui, sans-serif;
+    --glass-blur: 18px;
+    --accent: #16b6c9;
+    --accent-deep: #0e7c97;
+    --ink: #0c2733;
+    --ink-soft: rgba(12,39,51,0.66);
+    --ink-faint: rgba(12,39,51,0.42);
+    --page-bg: #eaf6fb;
+    --glass-bg: rgba(255,255,255,0.42);
+    --glass-bg-strong: rgba(255,255,255,0.66);
+    --glass-border: rgba(255,255,255,0.7);
+    --glass-shadow: 0 18px 50px -18px rgba(12,60,80,0.45);
+    --hairline: rgba(12,60,80,0.12);
+    --on-hero: #ffffff;
+    --on-hero-soft: rgba(255,255,255,0.82);
+    --chip-bg: rgba(255,255,255,0.5);
+    --ticker-bg: #0e7c97;
+    transition: --accent 0.6s;
+  }
+
+  html[data-tod="dawn"] {
+    --ink:#3a2740; --ink-soft:rgba(58,39,64,0.66); --ink-faint:rgba(58,39,64,0.4);
+    --page-bg:#fbeef0; --accent:#e98aa6; --accent-deep:#c25f87;
+    --glass-bg:rgba(255,250,251,0.46); --glass-bg-strong:rgba(255,250,251,0.7);
+    --glass-border:rgba(255,255,255,0.8); --hairline:rgba(120,70,90,0.14);
+    --on-hero:#fff; --on-hero-soft:rgba(255,255,255,0.85); --chip-bg:rgba(255,255,255,0.5);
+    --ticker-bg: color-mix(in srgb,#c25f87 82%,#6b3aa0);
+  }
+  html[data-tod="day"] {
+    --ink:#0c2733; --ink-soft:rgba(12,39,51,0.66); --ink-faint:rgba(12,39,51,0.42);
+    --page-bg:#e8f6fb; --accent:#16b6c9; --accent-deep:#0e7c97;
+    --glass-bg:rgba(255,255,255,0.42); --glass-bg-strong:rgba(255,255,255,0.68);
+    --glass-border:rgba(255,255,255,0.72); --hairline:rgba(12,60,80,0.12);
+    --on-hero:#fff; --on-hero-soft:rgba(255,255,255,0.85); --chip-bg:rgba(255,255,255,0.5);
+    --ticker-bg: #0e7c97;
+  }
+  html[data-tod="dusk"] {
+    --ink:#f3ece6; --ink-soft:rgba(243,236,230,0.72); --ink-faint:rgba(243,236,230,0.46);
+    --page-bg:#241a2e; --accent:#ffb27a; --accent-deep:#ff8a5c;
+    --glass-bg:rgba(60,42,66,0.4); --glass-bg-strong:rgba(60,42,66,0.62);
+    --glass-border:rgba(255,210,180,0.28); --hairline:rgba(255,210,180,0.16);
+    --on-hero:#fff; --on-hero-soft:rgba(255,255,255,0.82); --chip-bg:rgba(255,255,255,0.12);
+    --ticker-bg: color-mix(in srgb,#ff8a5c 42%,#7a3a8a);
+  }
+  html[data-tod="night"] {
+    --ink:#dfe9f4; --ink-soft:rgba(223,233,244,0.7); --ink-faint:rgba(223,233,244,0.42);
+    --page-bg:#0a1426; --accent:#5fd3e6; --accent-deep:#3aa9c4;
+    --glass-bg:rgba(20,34,58,0.44); --glass-bg-strong:rgba(20,34,58,0.66);
+    --glass-border:rgba(150,200,230,0.22); --hairline:rgba(150,200,230,0.14);
+    --on-hero:#eaf4ff; --on-hero-soft:rgba(234,244,255,0.8); --chip-bg:rgba(255,255,255,0.1);
+    --ticker-bg: color-mix(in srgb,#3aa9c4 62%,#000);
+  }
+
+  body {
+    font-family: var(--font-ui);
+    color: var(--ink);
+    background: var(--page-bg);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    transition: background 1.1s ease, color 0.8s ease;
+    overflow-x: hidden;
+  }
+  #root { min-height: 100vh; }
+  ::selection { background: var(--accent); color: #fff; }
+
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; }
+
+  ::-webkit-scrollbar { width: 11px; }
+  ::-webkit-scrollbar-thumb { background: var(--ticker-bg); border-radius: 20px; border: 3px solid var(--page-bg); }
+  ::-webkit-scrollbar-track { background: transparent; }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <!-- scenes: animated sea + sky engine -->
+  <script type="text/babel">
+/* ============================================================
+   Grammar Gate — animated sea + sky scene engine
+   ============================================================ */
+
+const HORIZON = 60;
+
+const TOD = {
+  dawn: {
+    sky: "linear-gradient(180deg,#5b4d86 0%,#9b7bb0 26%,#dc9bb4 52%,#f8bfae 76%,#ffe2c4 100%)",
+    sea: "linear-gradient(180deg,#e6b1c2 0%,#c79bc6 42%,#9b86bd 100%)",
+    sun: { left: "24%", top: "46%", color: "#fff0d6", glow: "#ffcaa8", size: 132, op: 1 },
+    moonOp: 0, starOp: 0.12, cloudOp: 0.9, cloudTint: "#ffe6ea",
+    silhouette: "#5a4a70", silhouetteSoft: "#7a6a90",
+    reflection: "rgba(255,224,196,0.55)", haze: "rgba(255,210,200,0.35)"
+  },
+  day: {
+    sky: "linear-gradient(180deg,#2f86d4 0%,#5aa9e4 34%,#93cdee 64%,#cdeef8 100%)",
+    sea: "linear-gradient(180deg,#86d6ea 0%,#39a9d0 48%,#1c7ba0 100%)",
+    sun: { left: "72%", top: "20%", color: "#fffbe9", glow: "#ffe9a8", size: 116, op: 1 },
+    moonOp: 0, starOp: 0, cloudOp: 1, cloudTint: "#ffffff",
+    silhouette: "#3f6f86", silhouetteSoft: "#5d92a8",
+    reflection: "rgba(255,247,214,0.5)", haze: "rgba(190,232,245,0.4)"
+  },
+  dusk: {
+    sky: "linear-gradient(180deg,#241a48 0%,#5c2f6e 32%,#a8456c 58%,#e07457 80%,#f6b46a 100%)",
+    sea: "linear-gradient(180deg,#c98368 0%,#7c4a6e 46%,#33274f 100%)",
+    sun: { left: "78%", top: "50%", color: "#ffd9a0", glow: "#ff8e54", size: 138, op: 1 },
+    moonOp: 0.25, starOp: 0.45, cloudOp: 0.85, cloudTint: "#f0b48f",
+    silhouette: "#2c1f3e", silhouetteSoft: "#4a3358",
+    reflection: "rgba(255,150,90,0.5)", haze: "rgba(170,90,110,0.3)"
+  },
+  night: {
+    sky: "linear-gradient(180deg,#060b20 0%,#0e1d3e 40%,#163a52 74%,#235e6c 100%)",
+    sea: "linear-gradient(180deg,#2a5a68 0%,#143a4e 48%,#081d2e 100%)",
+    sun: { left: "70%", top: "16%", color: "#1a2440", glow: "#1a2440", size: 0, op: 0 },
+    moonOp: 1, starOp: 1, cloudOp: 0.5, cloudTint: "#1d3350",
+    silhouette: "#0a1626", silhouetteSoft: "#16283e",
+    reflection: "rgba(180,225,240,0.4)", haze: "rgba(30,70,90,0.4)"
+  }
+};
+const TOD_KEYS = ["dawn", "day", "dusk", "night"];
+
+const STARS = Array.from({ length: 130 }, () => ({
+  x: Math.random() * 100,
+  y: Math.random() * (HORIZON - 4),
+  s: Math.random() * 1.8 + 0.6,
+  d: Math.random() * 4,
+  b: 0.5 + Math.random() * 0.5
+}));
+
+function SceneStyles() {
+  return (
+    <style>{`
+    .gg-scene{position:absolute;inset:0;overflow:hidden;}
+    .gg-layer{position:absolute;inset:0;transition:opacity 1.15s ease;}
+    .gg-sky{height:${HORIZON + 2}%;top:0;}
+    .gg-sea-wrap{position:absolute;left:0;right:0;bottom:0;height:${100 - HORIZON}%;overflow:hidden;-webkit-transform:translateZ(0);transform:translateZ(0);}
+    .gg-sea{position:absolute;inset:0;transition:opacity 1.15s ease;}
+    .gg-sun{position:absolute;border-radius:50%;transform:translate(-50%,-50%);
+      transition:left 1.2s ease,top 1.2s ease,background 1.2s ease,box-shadow 1.2s ease,width 1.2s ease,height 1.2s ease,opacity 1.2s ease;
+      will-change:left,top;}
+    .gg-moon{position:absolute;width:84px;height:84px;border-radius:50%;
+      transform:translate(-50%,-50%);transition:opacity 1.2s ease,left 1.2s ease,top 1.2s ease;
+      background:radial-gradient(circle at 38% 34%,#fdfdf5 0%,#e6ecf5 55%,#c4d0e0 100%);
+      box-shadow:0 0 50px 12px rgba(210,225,245,0.5),inset -10px -8px 0 -4px rgba(150,170,200,0.35);}
+    .gg-star{position:absolute;border-radius:50%;background:#fff;animation:ggtwinkle 4s ease-in-out infinite;}
+    @keyframes ggtwinkle{0%,100%{opacity:.25;}50%{opacity:1;}}
+    .gg-stars{transition:opacity 1.4s ease;}
+    .gg-cloud-track{position:absolute;left:0;will-change:transform;}
+    .gg-cloud{position:absolute;filter:blur(2px);transform-origin:left center;opacity:.92;}
+    .gg-cloud b{position:absolute;border-radius:50%;display:block;}
+    .gg-drift1{animation:ggdrift 90s linear infinite;}
+    .gg-drift2{animation:ggdrift 130s linear infinite;}
+    .gg-drift3{animation:ggdrift 70s linear infinite;}
+    @keyframes ggdrift{from{transform:translateX(-28vw);}to{transform:translateX(128vw);}}
+    .gg-reflect{position:absolute;top:0;width:120px;height:78%;transform:translateX(-50%);
+      filter:blur(7px);transition:left 1.2s ease,background 1.2s ease,opacity 1.2s ease;
+      animation:ggshimmer 5s ease-in-out infinite;mix-blend-mode:screen;}
+    @keyframes ggshimmer{0%,100%{opacity:.5;transform:translateX(-50%) scaleX(1);}50%{opacity:.85;transform:translateX(-50%) scaleX(1.25);}}
+    .gg-wave{position:absolute;left:0;width:200%;animation:ggwave linear infinite;will-change:transform;}
+    @keyframes ggwave{from{transform:translate3d(0,0,0);}to{transform:translate3d(-50%,0,0);}}
+    .gg-boat{position:absolute;animation:ggbob 6s ease-in-out infinite;transform-origin:center bottom;will-change:transform;}
+    @keyframes ggbob{0%,100%{transform:translateY(0) rotate(-1.2deg);}50%{transform:translateY(-7px) rotate(1.2deg);}}
+    .gg-boat-far{animation:ggbob 8s ease-in-out infinite;}
+    .gg-sail-track{position:absolute;left:0;will-change:transform;animation:ggsail 26s linear infinite;}
+    @keyframes ggsail{from{transform:translateX(-18vw);}to{transform:translateX(118vw);}}
+    .gg-sail-track .gg-boat{position:relative;left:0;bottom:0;}
+    .gg-sailmove{position:absolute;left:0;will-change:transform;animation:ggsailmove linear infinite;}
+    @keyframes ggsailmove{from{transform:translateX(var(--from,-15vw));}to{transform:translateX(var(--to,115vw));}}
+    .gg-sailmove .gg-boat{position:relative;left:auto;bottom:auto;}
+    .gg-beacon-beam{position:absolute;transform-origin:left center;filter:blur(6px);
+      mix-blend-mode:screen;pointer-events:none;
+      animation:ggsweep 8.5s ease-in-out infinite;will-change:transform;}
+    @keyframes ggsweep{0%,100%{transform:translateY(-50%) rotate(var(--restdeg,-30deg));}
+      50%{transform:translateY(-50%) rotate(var(--topdeg,12deg));}}
+    .gg-bird{position:absolute;animation:ggfly 30s linear infinite;will-change:transform;}
+    @keyframes ggfly{from{transform:translate(-12vw,12px);}to{transform:translate(118vw,-46px);}}
+    .gg-bubble{position:absolute;border-radius:50%;background:radial-gradient(circle at 32% 30%,rgba(255,255,255,.85),rgba(255,255,255,.05));
+      border:1px solid rgba(255,255,255,.35);animation:ggrise linear infinite;will-change:transform,opacity;}
+    @keyframes ggrise{0%{transform:translateY(0) translateX(0);opacity:0;}10%{opacity:.8;}100%{transform:translateY(-340px) translateX(18px);opacity:0;}}
+    .gg-ray{position:absolute;transform-origin:top center;mix-blend-mode:screen;
+      background:linear-gradient(180deg,rgba(255,255,255,.5),rgba(255,255,255,0));animation:ggraypulse 7s ease-in-out infinite;}
+    @keyframes ggraypulse{0%,100%{opacity:.35;}50%{opacity:.7;}}
+    .gg-current{position:absolute;height:9px;border-radius:50%;
+      background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);
+      filter:blur(6px);mix-blend-mode:screen;pointer-events:none;
+      will-change:transform,opacity;animation:ggcurrent linear infinite;}
+    @keyframes ggcurrent{0%{transform:translateX(-70vw);opacity:0;}
+      14%{opacity:var(--op,.5);}86%{opacity:var(--op,.5);}100%{transform:translateX(170vw);opacity:0;}}
+    .gg-glasspanel{position:absolute;border-radius:20px;border:1px solid rgba(255,255,255,.5);
+      background:linear-gradient(135deg,rgba(255,255,255,.28),rgba(255,255,255,.06));
+      backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);box-shadow:0 16px 50px -18px rgba(0,40,60,.5);
+      animation:ggfloat 9s ease-in-out infinite;will-change:transform;}
+    @keyframes ggfloat{0%,100%{transform:translateY(0) rotate(var(--r,0deg));}50%{transform:translateY(-16px) rotate(var(--r,0deg));}}
+    .gg-haze{position:absolute;left:0;right:0;height:14%;top:${HORIZON - 7}%;transition:background 1.2s ease;pointer-events:none;}
+    .gg-scene.is-static *{animation-delay:-9s!important;animation-play-state:paused!important;}
+    @media (prefers-reduced-motion: reduce){
+      .gg-drift1,.gg-drift2,.gg-drift3,.gg-boat,.gg-bird,.gg-bubble,.gg-ray,.gg-glasspanel,.gg-reflect,.gg-star,.gg-wave,.gg-sailmove,.gg-beacon-beam,.gg-current{animation:none!important;}
+    }
+    `}</style>
+  );
+}
+
+function Sky({ tod }) {
+  return (
+    <div className="gg-layer gg-sky">
+      {TOD_KEYS.map((k) =>
+        <div key={k} className="gg-layer" style={{ background: TOD[k].sky, opacity: tod === k ? 1 : 0 }} />
+      )}
+    </div>
+  );
+}
+
+function Stars({ tod }) {
+  return (
+    <div className="gg-layer gg-stars" style={{ height: `${HORIZON}%`, opacity: TOD[tod].starOp }}>
+      {STARS.map((s, i) =>
+        <span key={i} className="gg-star" style={{
+          left: `${s.x}%`, top: `${s.y}%`, width: s.s, height: s.s,
+          animationDelay: `${s.d}s`, opacity: s.b
+        }} />
+      )}
+    </div>
+  );
+}
+
+function Celestial({ tod }) {
+  const s = TOD[tod].sun;
+  return (
+    <React.Fragment>
+      <div className="gg-sun" style={{
+        left: s.left, top: s.top, width: s.size, height: s.size, opacity: s.op,
+        background: `radial-gradient(circle at 50% 50%, #fff 0%, ${s.color} 42%, ${s.glow} 100%)`,
+        boxShadow: `0 0 90px 30px ${s.glow}99, 0 0 200px 80px ${s.glow}55`
+      }} />
+      <div className="gg-moon" style={{ left: tod === "night" ? "26%" : "70%", top: "18%", opacity: TOD[tod].moonOp }} />
+    </React.Fragment>
+  );
+}
+
+function Cloud({ tint, blobs, scale, top, delay, cls }) {
+  return (
+    <div className={`gg-cloud-track ${cls}`} style={{ top, animationDelay: delay }}>
+      <div className="gg-cloud" style={{ transform: `scale(${scale})` }}>
+        {blobs.map((b, i) =>
+          <b key={i} style={{
+            left: b.x, top: b.y, width: b.w, height: b.h,
+            background: tint, boxShadow: `0 8px 30px -6px ${tint}`
+          }} />
+        )}
+      </div>
+    </div>
+  );
+}
+const CLOUD_SHAPE = [
+  { x: 0, y: 18, w: 70, h: 44 }, { x: 38, y: 4, w: 92, h: 62 },
+  { x: 104, y: 16, w: 76, h: 48 }, { x: 150, y: 26, w: 64, h: 38 }
+];
+
+function Clouds({ tod }) {
+  const t = TOD[tod];
+  const defs = [
+    { top: "10%", scale: 1.1, cls: "gg-drift1", delay: "-12s" },
+    { top: "24%", scale: 0.7, cls: "gg-drift2", delay: "-60s" },
+    { top: "6%", scale: 0.85, cls: "gg-drift3", delay: "-30s" },
+    { top: "34%", scale: 0.55, cls: "gg-drift2", delay: "-95s" }
+  ];
+  return (
+    <div className="gg-layer" style={{ height: `${HORIZON}%`, opacity: t.cloudOp }}>
+      {defs.map((d, i) =>
+        <Cloud key={i} tint={t.cloudTint} blobs={CLOUD_SHAPE} cls={d.cls}
+          scale={d.scale} top={d.top} delay={d.delay} />
+      )}
+    </div>
+  );
+}
+
+function Sea({ tod }) {
+  const t = TOD[tod];
+  const s = TOD[tod].sun;
+  return (
+    <div className="gg-sea-wrap">
+      {TOD_KEYS.map((k) =>
+        <div key={k} className="gg-sea" style={{ background: TOD[k].sea, opacity: tod === k ? 1 : 0 }} />
+      )}
+      <div className="gg-reflect" style={{
+        left: s.op > 0 ? s.left : tod === "night" ? "26%" : "70%",
+        background: `linear-gradient(180deg, ${t.reflection} 0%, rgba(255,255,255,0) 100%)`,
+        opacity: 0.8
+      }} />
+      <WaveBand color="rgba(255,255,255,0.18)" top="2%" dur="11s" h={26} />
+      <WaveBand color="rgba(255,255,255,0.12)" top="20%" dur="15s" h={34} />
+      <WaveBand color="rgba(0,30,45,0.16)" top="46%" dur="19s" h={46} />
+    </div>
+  );
+}
+
+function Currents() {
+  const lanes = [
+    { top: "22%", w: "42vw", dur: "17s", delay: "0s", op: 0.5 },
+    { top: "42%", w: "56vw", dur: "23s", delay: "-8s", op: 0.4 },
+    { top: "62%", w: "36vw", dur: "19s", delay: "-13s", op: 0.5 },
+    { top: "80%", w: "60vw", dur: "27s", delay: "-5s", op: 0.34 }
+  ];
+  return (
+    <React.Fragment>
+      {lanes.map((l, i) =>
+        <span key={i} className="gg-current" style={{
+          top: l.top, width: l.w, "--op": l.op,
+          animationDuration: l.dur, animationDelay: l.delay
+        }} />
+      )}
+    </React.Fragment>
+  );
+}
+
+const WAVE_D = (() => {
+  let d = "M0,30";
+  for (let x = 0; x < 2400; x += 200) d += ` C${x + 50},8 ${x + 150},52 ${x + 200},30`;
+  return d + " L2400,60 L0,60 Z";
+})();
+
+function WaveBand({ color, top, dur, h }) {
+  return (
+    <svg className="gg-wave" style={{ top, height: h, animationDuration: dur }}
+      viewBox="0 0 2400 60" preserveAspectRatio="none">
+      <path d={WAVE_D} fill={color} />
+    </svg>
+  );
+}
+
+const MTN = {
+  range: {
+    far: "M0,220 L0,150 Q120,92 250,132 Q380,168 500,112 Q640,52 780,124 Q900,170 1030,108 Q1120,74 1200,120 L1200,220 Z",
+    near: "M0,220 L0,182 Q150,120 320,172 Q470,214 600,150 Q740,92 880,162 Q1010,210 1120,150 Q1165,128 1200,166 L1200,220 Z"
+  },
+  alpine: {
+    far: "M0,220 L0,158 L120,150 L250,92 L360,150 L470,70 L590,150 L710,86 L840,150 L980,80 L1100,150 L1200,118 L1200,220 Z",
+    near: "M0,220 L0,178 L150,168 L330,58 L470,168 L600,150 L770,40 L930,168 L1060,128 L1180,86 L1200,96 L1200,220 Z",
+    caps: [
+      "M299,98 L330,58 L362,99 L350,90 L342,101 L332,92 L322,102 L311,92 L299,98 Z",
+      "M739,82 L770,40 L802,86 L790,77 L782,89 L772,79 L762,91 L751,80 L739,82 Z"
+    ]
+  },
+  volcanic: {
+    far: "M0,220 L0,188 Q150,168 280,184 Q360,152 450,184 Q620,162 760,186 Q860,158 970,186 Q1090,166 1200,182 L1200,220 Z",
+    near: "M0,220 L0,200 L150,150 L228,108 L262,116 L320,156 L560,196 L705,74 L745,90 L790,76 L1000,196 L1080,150 L1140,114 L1176,122 L1200,160 L1200,220 Z",
+    vent: { x: 747, y: 86 }
+  }
+};
+
+function Mountains({ tod }) {
+  const t = TOD[tod];
+  return (
+    <svg style={{ position: "absolute", left: 0, right: 0, bottom: `${100 - HORIZON}%`, width: "100%", height: "26%" }}
+      viewBox="0 0 1200 200" preserveAspectRatio="none">
+      <path d="M0,200 L0,120 L120,60 L240,110 L360,40 L520,120 L680,70 L820,130 L980,80 L1120,120 L1200,90 L1200,200 Z"
+        fill={t.silhouetteSoft} opacity="0.55" style={{ transition: "fill 1.2s ease", opacity: "1" }} />
+      <path d="M0,200 L0,150 L160,100 L320,150 L470,90 L640,160 L780,110 L940,165 L1090,120 L1200,150 L1200,200 Z"
+        fill={t.silhouette} opacity="0.8" style={{ transition: "fill 1.2s ease" }} />
+    </svg>
+  );
+}
+
+/* selectable backdrop for the body (descent) section only */
+function MountainBackdrop({ tod, variant = "range", style }) {
+  const t = TOD[tod];
+  const V = MTN[variant] || MTN.range;
+  const dim = tod === "night";
+  const snow = `color-mix(in srgb, #f3fbff ${dim ? 54 : 80}%, ${t.silhouetteSoft})`;
+  const lit = tod === "dusk" || tod === "night";
+  return (
+    <div className="gg-mtns" style={{ position: "absolute", left: 0, right: 0, bottom: `${100 - HORIZON}%`, height: "28%", ...style }} aria-hidden="true">
+      <svg viewBox="0 0 1200 220" preserveAspectRatio="none" style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}>
+        {V.vent && lit &&
+          <ellipse cx={V.vent.x} cy={V.vent.y} rx="22" ry="11" fill="#ff7a3c" style={{ filter: "blur(3px)" }}>
+            <animate attributeName="opacity" values="0.3;0.62;0.3" dur="4.5s" repeatCount="indefinite" />
+          </ellipse>}
+        <path d={V.far} fill={t.silhouetteSoft} style={{ transition: "fill 1.2s ease" }} />
+        <path d={V.near} fill={t.silhouette} style={{ transition: "fill 1.2s ease" }} />
+        {V.caps && V.caps.map((c, i) => <path key={i} d={c} fill={snow} opacity="0.9" />)}
+      </svg>
+    </div>
+  );
+}
+
+function Sailboat({ tod, far, size, style, hull, sail }) {
+  const t = TOD[tod];
+  const base = far ? t.silhouetteSoft : t.silhouette;
+  const hullCol = hull || base;
+  const sailCol = sail || base;
+  const sailBack = `color-mix(in srgb, ${sail || base} ${sail ? 86 : 80}%, #000)`;
+  const w = size != null ? size : far ? 46 : 150;
+  const h = w * 1.2;
+  return (
+    <div className={`gg-boat ${far ? "gg-boat-far" : ""}`} style={style}>
+      <svg width={w} height={h} viewBox="0 0 150 180">
+        <line x1="74" y1="6" x2="74" y2="132" stroke={hullCol} strokeWidth="2.4" />
+        <path d="M74,12 C108,40 112,96 110,120 L74,120 Z" fill={sailCol} />
+        <path d="M70,20 C44,46 40,98 42,122 L70,122 Z" fill={sailBack} />
+        <path d="M30,128 L120,128 C112,150 98,160 75,160 C52,160 38,150 30,128 Z" fill={hullCol} />
+      </svg>
+    </div>
+  );
+}
+
+function MovingBoat({ tod, far, size, bottom, from, to, dur, delay, z }) {
+  return (
+    <div className="gg-sailmove" style={{
+      bottom, "--from": from, "--to": to,
+      animationDuration: dur, animationDelay: delay, zIndex: z
+    }}>
+      <Sailboat tod={tod} far={far} size={size} />
+    </div>
+  );
+}
+
+function Islands({ tod }) {
+  const t = TOD[tod];
+  const base = 100 - HORIZON;
+  return (
+    <React.Fragment>
+      <svg style={{ position: "absolute", left: 0, right: 0, bottom: `${base}%`, width: "100%", height: "13%" }}
+        viewBox="0 0 1200 110" preserveAspectRatio="none">
+        <path d="M360,110 Q470,58 600,94 L770,110 Z M880,110 Q990,68 1130,98 L1200,108 L1200,110 Z"
+          fill={t.silhouetteSoft} opacity="1" style={{ transition: "fill 1.2s ease" }} />
+      </svg>
+      <svg style={{ position: "absolute", left: 0, bottom: `${base - 1}%`, width: "48%", height: "17%" }}
+        viewBox="0 0 600 120" preserveAspectRatio="none">
+        <path d="M-40,120 Q120,36 300,86 Q430,122 540,116 L600,120 Z" fill={t.silhouette} opacity="1"
+          style={{ transition: "fill 1.2s ease", opacity: "1" }} />
+      </svg>
+      <svg style={{ position: "absolute", right: 0, bottom: `${base - 1}%`, width: "42%", height: "14%" }}
+        viewBox="0 0 520 100" preserveAspectRatio="none">
+        <path d="M30,100 Q170,36 360,78 Q450,98 560,100 L30,100 Z" fill={t.silhouette} opacity="1"
+          style={{ transition: "fill 1.2s ease", opacity: "1" }} />
+      </svg>
+    </React.Fragment>
+  );
+}
+
+function BeaconLight({ tod, style }) {
+  const t = TOD[tod];
+  const lit = tod === "night" || tod === "dusk";
+  const beamCol = lit ? "rgba(255,236,176,0.85)" : "rgba(255,250,224,0.7)";
+  return (
+    <div style={{ position: "absolute", width: 150, height: 300, ...style }}>
+      <div className="gg-beacon-beam" style={{
+        left: 75, top: 56, width: 320, height: 64,
+        background: `radial-gradient(ellipse 100% 56% at 0% 50%, ${beamCol} 0%, transparent 80%)`,
+        opacity: lit ? 0.85 : 0.4
+      }} />
+      <svg width="150" height="300" viewBox="0 0 120 240" style={{ position: "absolute", inset: 0 }}>
+        <path d="M2,240 L2,150 C22,138 46,136 60,138 C82,141 102,150 118,150 L118,240 Z" fill={t.silhouette} />
+        <path d="M46,148 L74,148 L80,58 L40,58 Z" fill={t.silhouetteSoft} opacity="0.95" style={{ transition: "fill 1.2s ease" }} />
+        <path d="M44,108 L76,108 L74,90 L46,90 Z" fill={t.silhouette} opacity="0.55" />
+        <rect x="42" y="38" width="36" height="22" rx="3" fill={t.silhouette} />
+        <circle cx="60" cy="49" r="5.5" fill={beamCol} opacity={lit ? 0.95 : 0.6} />
+        <path d="M40,38 L80,38 L60,14 Z" fill={t.silhouette} />
+      </svg>
+    </div>
+  );
+}
+
+function Lighthouse({ tod, style }) {
+  const t = TOD[tod];
+  const lit = tod === "night" || tod === "dusk";
+  const beamCol = lit ? "rgba(255,236,176,0.85)" : "rgba(255,250,224,0.7)";
+  return (
+    <div style={{ position: "absolute", width: 120, height: 240, ...style }}>
+      <div style={{ position: "absolute", left: 60, top: 50, width: 0, height: 0,
+        transform: "scaleX(-1)", transformOrigin: "left center" }}>
+        <div className="gg-beacon-beam" style={{
+          left: 0, top: 0, width: 300, height: 58,
+          background: `radial-gradient(ellipse 100% 56% at 0% 50%, ${beamCol} 0%, transparent 80%)`,
+          opacity: lit ? 0.82 : 0.4
+        }} />
+      </div>
+      <svg width="120" height="240" viewBox="0 0 120 240" style={{ position: "absolute", inset: 0 }}>
+        <path d="M6,240 L6,150 C20,140 40,138 60,140 C84,142 104,150 118,150 L118,240 Z" fill={t.silhouette} />
+        <path d="M48,148 L72,148 L78,60 L42,60 Z" fill={t.silhouetteSoft} opacity="0.95" style={{ transition: "fill 1.2s ease" }} />
+        <rect x="44" y="40" width="32" height="22" rx="3" fill={t.silhouette} />
+        <circle cx="60" cy="50" r="5.2" fill={beamCol} opacity={lit ? 0.95 : 0.62} style={{ transition: "opacity 1.2s ease" }} />
+        <path d="M42,40 L78,40 L60,18 Z" fill={t.silhouette} />
+      </svg>
+    </div>
+  );
+}
+
+function Birds({ tod }) {
+  if (tod === "night") return null;
+  const col = TOD[tod].silhouette;
+  const flock = [
+    { t: "14%", d: "0s", s: 1 }, { t: "21%", d: "-7s", s: 0.78 },
+    { t: "10%", d: "-13s", s: 1.15 }, { t: "27%", d: "-19s", s: 0.66 },
+    { t: "17%", d: "-24s", s: 0.9 }
+  ];
+  return (
+    <div className="gg-layer" style={{ height: `${HORIZON}%` }}>
+      {flock.map((b, i) =>
+        <span key={i} className="gg-bird" style={{ top: b.t, animationDelay: b.d }}>
+          <svg width={26 * b.s} height={12 * b.s} viewBox="0 0 26 12">
+            <path d="M1,9 C5,3 9,3 13,8 C17,3 21,3 25,9" stroke={col} strokeWidth="1.6" fill="none" />
+          </svg>
+        </span>
+      )}
+    </div>
+  );
+}
+
+function Bubbles() {
+  const arr = Array.from({ length: 14 }, (_, i) => ({
+    left: `${6 + Math.random() * 88}%`, size: 5 + Math.random() * 16,
+    dur: `${7 + Math.random() * 8}s`, delay: `${-Math.random() * 12}s`,
+    bottom: `${Math.random() * 30}%`
+  }));
+  return (
+    <div className="gg-sea-wrap" style={{ pointerEvents: "none" }}>
+      {arr.map((b, i) =>
+        <span key={i} className="gg-bubble" style={{
+          left: b.left, bottom: b.bottom, width: b.size, height: b.size,
+          animationDuration: b.dur, animationDelay: b.delay
+        }} />
+      )}
+    </div>
+  );
+}
+
+function LightRays({ tod }) {
+  const s = TOD[tod].sun;
+  if (s.op === 0) return null;
+  const rays = [-22, -10, 2, 14, 26];
+  return (
+    <div className="gg-layer" style={{ height: `${HORIZON + 8}%`, pointerEvents: "none", opacity: tod === "day" ? 0.9 : 0.6, transition: "opacity 1.2s" }}>
+      {rays.map((r, i) =>
+        <div key={i} className="gg-ray" style={{
+          left: s.left, top: s.top, width: 60 + i * 6, height: "70%",
+          transform: `translateX(-50%) rotate(${r}deg)`, animationDelay: `${i * 0.8}s`,
+          filter: "blur(8px)"
+        }} />
+      )}
+    </div>
+  );
+}
+
+function GlassPanels({ tod }) {
+  const panels = [
+    { left: "12%", top: "26%", w: 120, h: 150, r: "-6deg", d: "0s" },
+    { left: "78%", top: "20%", w: 100, h: 132, r: "7deg", d: "-3s" },
+    { left: "66%", top: "44%", w: 88, h: 108, r: "-4deg", d: "-5s" }
+  ];
+  return (
+    <div className="gg-layer" style={{ height: `${HORIZON}%`, pointerEvents: "none" }}>
+      {panels.map((p, i) =>
+        <div key={i} className="gg-glasspanel" style={{
+          left: p.left, top: p.top, width: p.w, height: p.h, "--r": p.r, animationDelay: p.d
+        }} />
+      )}
+    </div>
+  );
+}
+
+function HorizonScene({ tod, staticFrame }) {
+  return (
+    <div className={`gg-scene ${staticFrame ? "is-static" : ""}`}>
+      <Sky tod={tod} /><Stars tod={tod} /><Celestial tod={tod} /><Clouds tod={tod} /><Birds tod={tod} />
+      <Mountains tod={tod} />
+      <Sea tod={tod} />
+      <div className="gg-haze" style={{ background: `linear-gradient(180deg, transparent, ${TOD[tod].haze})` }} />
+    </div>
+  );
+}
+
+function VoyageScene({ tod, staticFrame }) {
+  return (
+    <div className={`gg-scene ${staticFrame ? "is-static" : ""}`}>
+      <Sky tod={tod} /><Stars tod={tod} /><Celestial tod={tod} /><Clouds tod={tod} /><Birds tod={tod} />
+      <Mountains tod={tod} />
+      <Lighthouse tod={tod} style={{ right: "6%", bottom: `${100 - HORIZON - 1}%` }} />
+      <Sea tod={tod} />
+      <MovingBoat tod={tod} size={30} bottom={`${100 - HORIZON - 4}%`} from="-14vw" to="118vw" dur="120s" delay="-15s" z={3} />
+      <MovingBoat tod={tod} size={26} bottom={`${100 - HORIZON - 5}%`} from="-14vw" to="118vw" dur="135s" delay="-78s" z={3} />
+      <MovingBoat tod={tod} size={74} bottom={`${100 - HORIZON - 14}%`} from="-18vw" to="120vw" dur="80s" delay="-26s" z={4} />
+      <MovingBoat tod={tod} size={158} bottom={`${100 - HORIZON - 31}%`} from="-24vw" to="124vw" dur="46s" delay="0s" z={5} />
+      <div className="gg-haze" style={{ background: `linear-gradient(180deg, transparent, ${TOD[tod].haze})` }} />
+    </div>
+  );
+}
+
+function ArchipelagoScene({ tod, staticFrame }) {
+  return (
+    <div className={`gg-scene ${staticFrame ? "is-static" : ""}`}>
+      <Sky tod={tod} /><Stars tod={tod} /><Celestial tod={tod} /><Clouds tod={tod} /><Birds tod={tod} />
+      <Islands tod={tod} />
+      <Sea tod={tod} />
+      <MovingBoat tod={tod} size={28} bottom={`${100 - HORIZON - 4}%`} from="-14vw" to="118vw" dur="120s" delay="-20s" z={3} />
+      <MovingBoat tod={tod} size={66} bottom={`${100 - HORIZON - 15}%`} from="118vw" to="-18vw" dur="70s" delay="-12s" z={4} />
+      <MovingBoat tod={tod} size={144} bottom={`${100 - HORIZON - 30}%`} from="-24vw" to="124vw" dur="48s" delay="0s" z={5} />
+      <div className="gg-haze" style={{ background: `linear-gradient(180deg, transparent, ${TOD[tod].haze})` }} />
+    </div>
+  );
+}
+
+function BeaconScene({ tod, staticFrame }) {
+  return (
+    <div className={`gg-scene ${staticFrame ? "is-static" : ""}`}>
+      <Sky tod={tod} /><Stars tod={tod} /><Celestial tod={tod} /><Clouds tod={tod} /><Birds tod={tod} />
+      <Mountains tod={tod} />
+      <Sea tod={tod} />
+      <MovingBoat tod={tod} size={58} bottom={`${100 - HORIZON - 13}%`} from="118vw" to="-16vw" dur="95s" delay="0s" z={4} />
+      <BeaconLight tod={tod} style={{ left: "8%", bottom: `${100 - HORIZON - 6}%`, zIndex: 6 }} />
+      <div className="gg-haze" style={{ background: `linear-gradient(180deg, transparent, ${TOD[tod].haze})` }} />
+    </div>
+  );
+}
+
+function DeepScene({ tod, staticFrame }) {
+  return (
+    <div className={`gg-scene ${staticFrame ? "is-static" : ""}`}>
+      <Sky tod={tod} /><Stars tod={tod} /><Celestial tod={tod} /><Clouds tod={tod} />
+      <Birds tod={tod} />
+      <Sea tod={tod} />
+      <div className="gg-haze" style={{ background: `linear-gradient(180deg, transparent, ${TOD[tod].haze})` }} />
+    </div>
+  );
+}
+
+function Scene({ style, tod, staticFrame }) {
+  if (style === "voyage") return <VoyageScene tod={tod} staticFrame={staticFrame} />;
+  if (style === "deep") return <DeepScene tod={tod} staticFrame={staticFrame} />;
+  if (style === "archipelago") return <ArchipelagoScene tod={tod} staticFrame={staticFrame} />;
+  if (style === "beacon") return <BeaconScene tod={tod} staticFrame={staticFrame} />;
+  return <HorizonScene tod={tod} staticFrame={staticFrame} />;
+}
+
+Object.assign(window, { SceneStyles, Scene, TOD, TOD_KEYS, HORIZON });
+  </script>
+
+  <!-- chrome-styles: nav, hero, cards, footer styles -->
+  <script type="text/babel">
+/* ============================================================
+   Grammar Gate — application chrome styles
+   ============================================================ */
+function AppStyles() {
+  return (
+    <style>{`
+    .gg-eyebrow{
+      display:inline-flex;align-items:center;gap:9px;
+      font-family:var(--font-ui);font-weight:600;font-size:13px;
+      letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;
+      color:var(--on-hero-soft);
+    }
+    @media(max-width:520px){
+      .gg-eyebrow{ font-size:11px;letter-spacing:.1em;gap:7px;max-width:100%; }
+    }
+    .gg-eyebrow-dot{ display:none; }
+    .gg-eyebrow-dark{ color:var(--ink-soft); }
+
+    .gg-progress{
+      position:absolute;top:0;left:0;height:3px;
+      background:var(--ticker-bg);
+      border-radius:0 2px 2px 0;
+      pointer-events:none;
+      opacity:0;transition:width .12s linear,opacity .3s ease;
+    }
+    .gg-nav.is-scrolled .gg-progress{ opacity:1; }
+
+    .gg-btn{
+      position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      border:none;border-radius:999px;font-family:var(--font-ui);font-weight:600;
+      letter-spacing:.005em;white-space:nowrap;text-align:center;
+      transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s ease,background .4s ease,color .4s ease;
+      transform-style:preserve-3d;will-change:transform;
+    }
+    .gg-btn-sm{ padding:10px 18px;font-size:14px; }
+    .gg-btn-lg{ padding:16px 28px;font-size:16.5px; }
+    .gg-btn svg{ transition:transform .35s cubic-bezier(.2,.8,.2,1); }
+    .gg-btn:hover svg{ transform:translateX(4px); }
+
+    .gg-btn-primary{
+      background:var(--ink);color:var(--page-bg);
+      box-shadow:0 14px 30px -12px color-mix(in srgb,var(--ink) 70%,transparent);
+    }
+    .gg-btn-primary:hover{ box-shadow:0 22px 44px -14px color-mix(in srgb,var(--ink) 80%,transparent); }
+
+    .gg-btn-glass{
+      color:var(--on-hero);
+      background:linear-gradient(135deg,rgba(255,255,255,.30),rgba(255,255,255,.08));
+      border:1px solid rgba(255,255,255,.55);
+      backdrop-filter:blur(10px) saturate(140%);-webkit-backdrop-filter:blur(10px) saturate(140%);
+      box-shadow:0 14px 40px -18px rgba(0,40,60,.55),inset 0 1px 0 rgba(255,255,255,.6);
+    }
+    .gg-btn-glass:hover{ background:linear-gradient(135deg,rgba(255,255,255,.42),rgba(255,255,255,.14)); }
+
+    .gg-nav{
+      position:fixed;top:0;left:0;right:0;z-index:60;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:22px clamp(20px,4vw,56px);
+      transition:background .35s ease,padding .35s ease,box-shadow .35s ease,backdrop-filter .35s ease,border-color .35s ease;
+      border-bottom:1px solid transparent;
+    }
+    .gg-nav.is-scrolled{
+      padding-top:13px;padding-bottom:13px;
+      background:color-mix(in srgb,var(--page-bg) 80%,transparent);
+      backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);
+      box-shadow:0 12px 30px rgba(0,40,60,.16);
+      border-bottom:1px solid var(--hairline);
+    }
+    .gg-nav.is-scrolled .gg-brand-name,
+    .gg-nav.is-scrolled .gg-signin{ color:var(--ink); }
+    .gg-nav.is-scrolled .gg-nav-links a{ color:var(--ink-soft); }
+    .gg-nav.is-scrolled .gg-nav-links a:hover{ color:var(--ink); }
+    .gg-nav.is-scrolled .gg-nav-links a::after{ background:var(--ink); }
+    .gg-nav.is-scrolled .gg-brand-mark,
+    .gg-nav.is-scrolled .gg-gear,
+    .gg-nav.is-scrolled .gg-burger{
+      color:var(--ink);
+      background:color-mix(in srgb,var(--ink) 8%,transparent);
+      border-color:var(--hairline);
+      box-shadow:none;
+    }
+    .gg-nav.is-scrolled .gg-gear:hover{ background:color-mix(in srgb,var(--ink) 14%,transparent); }
+    .gg-brand{ display:inline-flex;align-items:center;gap:12px; }
+    .gg-brand-mark{
+      display:grid;place-items:center;width:42px;height:42px;border-radius:13px;
+      color:var(--on-hero);
+      background:linear-gradient(135deg,rgba(255,255,255,.28),rgba(255,255,255,.06));
+      border:1px solid rgba(255,255,255,.5);
+      backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.5);
+    }
+    .gg-brand-name{
+      font-family:var(--font-display);font-weight:700;font-size:clamp(15px,4.5vw,22px);letter-spacing:.01em;
+      color:var(--on-hero);white-space:nowrap;
+    }
+    .gg-nav-links{ display:flex;gap:30px; }
+    .gg-nav-links a{
+      font-family:var(--font-ui);font-weight:500;font-size:15px;color:var(--on-hero-soft);
+      position:relative;padding:4px 0;transition:color .25s ease;
+    }
+    .gg-nav-links a::after{
+      content:"";position:absolute;left:0;right:100%;bottom:-2px;height:1.5px;
+      background:var(--on-hero);transition:right .3s cubic-bezier(.2,.8,.2,1);
+    }
+    .gg-nav-links a:hover{ color:var(--on-hero); }
+    .gg-nav-links a:hover::after{ right:0; }
+    .gg-nav-right{ display:flex;align-items:center;gap:20px; }
+    .gg-signin{ font-family:var(--font-ui);font-weight:600;font-size:15px;color:var(--on-hero);white-space:nowrap; }
+    .gg-signin:hover{ opacity:.78; }
+
+    .gg-burger{
+      display:none;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+      width:40px;height:40px;border-radius:12px;color:var(--on-hero);
+      background:linear-gradient(135deg,rgba(255,255,255,.26),rgba(255,255,255,.06));
+      border:1px solid rgba(255,255,255,.5);
+      backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.5);
+    }
+    .gg-burger span{ display:block;width:18px;height:2px;border-radius:2px;background:currentColor;
+      transition:transform .3s cubic-bezier(.2,.8,.2,1),opacity .2s ease; }
+    .gg-nav.menu-open .gg-burger span:nth-child(1){ transform:translateY(6px) rotate(45deg); }
+    .gg-nav.menu-open .gg-burger span:nth-child(2){ opacity:0; }
+    .gg-nav.menu-open .gg-burger span:nth-child(3){ transform:translateY(-6px) rotate(-45deg); }
+
+    .gg-mobile-menu{
+      position:absolute;top:calc(100% + 8px);left:clamp(20px,4vw,56px);right:clamp(20px,4vw,56px);
+      display:none;flex-direction:column;gap:4px;padding:14px;border-radius:18px;
+      background:var(--page-bg);border:1px solid var(--glass-border);
+      box-shadow:0 24px 60px -22px rgba(0,40,60,.5);
+      opacity:0;transform:translateY(-10px) scale(.99);transform-origin:top center;
+      pointer-events:none;transition:opacity .24s ease,transform .24s cubic-bezier(.2,.8,.2,1);
+    }
+    .gg-mobile-menu.is-open{ opacity:1;transform:translateY(0) scale(1);pointer-events:auto; }
+    .gg-mobile-links{ display:flex;flex-direction:column; }
+    .gg-mobile-links a{
+      padding:12px 12px;border-radius:10px;
+      font-family:var(--font-ui);font-weight:600;font-size:16px;color:var(--ink);
+      transition:background .2s ease;
+    }
+    .gg-mobile-links a:hover{ background:color-mix(in srgb,var(--ink) 7%,transparent); }
+    .gg-mobile-actions{
+      display:flex;align-items:center;gap:10px;
+      margin-top:8px;padding-top:12px;border-top:1px solid var(--hairline);
+    }
+    .gg-mobile-signin{
+      flex:1;text-align:center;padding:11px 14px;border-radius:999px;
+      font-family:var(--font-ui);font-weight:600;font-size:15px;color:var(--ink);
+      border:1px solid var(--hairline);transition:background .2s ease;
+    }
+    .gg-mobile-signin:hover{ background:color-mix(in srgb,var(--ink) 7%,transparent); }
+    .gg-mobile-actions .gg-btn{ flex:1; }
+
+    @media(max-width:860px){
+      .gg-nav-links{ display:none; }
+      .gg-nav-right{ gap:8px; }
+      .gg-signin{ font-size:13px; }
+      .gg-burger{ display:flex; }
+      .gg-mobile-menu{ display:flex; }
+    }
+    @media(max-width:400px){
+      .gg-signin{ display:none; }
+    }
+
+    .gg-hero{
+      position:relative;min-height:100vh;min-height:100svh;
+      display:flex;flex-direction:column;justify-content:center;
+      padding:clamp(72px,10vh,104px) 0 clamp(32px,5vh,64px);
+      overflow:hidden;isolation:isolate;
+    }
+    .gg-hero-scene{ position:absolute;inset:0;z-index:0; }
+    .gg-hero-veil{
+      position:absolute;inset:0;z-index:1;pointer-events:none;
+      background:
+        radial-gradient(76% 52% at 50% 42%,rgba(0,22,38,.40),transparent 72%),
+        radial-gradient(120% 90% at 50% 6%,rgba(0,20,35,.30),transparent 50%),
+        linear-gradient(180deg,rgba(0,20,35,.16) 0%,transparent 22%,transparent 64%,rgba(0,20,35,.30) 100%);
+    }
+    .gg-hero-inner{
+      position:relative;z-index:10;
+      max-width:880px;margin:0 auto;padding:0 24px;
+      text-align:center;
+    }
+    .gg-h1{
+      font-family:var(--font-display);font-weight:700;
+      font-size:clamp(40px,min(6.5vw,9.6vh),90px);line-height:1.02;letter-spacing:-.012em;
+      margin:clamp(8px,1.6vh,20px) 0 0;color:var(--on-hero);
+      text-shadow:0 2px 40px rgba(0,25,40,.45);
+      text-wrap:balance;
+    }
+    .gg-h1-em{ font-style:italic;font-weight:600;color:var(--on-hero); }
+    .gg-sub{
+      font-family:var(--font-ui);font-weight:400;
+      font-size:clamp(15px,1.5vw,20px);line-height:1.55;
+      max-width:760px;margin:clamp(12px,2vh,24px) auto 0;color:var(--on-hero-soft);
+      text-shadow:0 1px 20px rgba(0,25,40,.3);text-wrap:pretty;
+    }
+    .gg-cta-row{ display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:clamp(20px,3vh,32px); }
+    .gg-trust{
+      font-family:var(--font-ui);font-size:14px;color:var(--on-hero-soft);margin-top:clamp(16px,2.4vh,26px);
+      text-shadow:0 1px 16px rgba(0,25,40,.3);
+    }
+    .gg-trust strong{ color:var(--on-hero);font-weight:700; }
+
+    .gg-settings{ position:relative; display:flex; align-items:center; }
+    .gg-gear{
+      display:grid;place-items:center;width:40px;height:40px;border-radius:12px;
+      color:var(--on-hero);
+      background:linear-gradient(135deg,rgba(255,255,255,.26),rgba(255,255,255,.06));
+      border:1px solid rgba(255,255,255,.5);
+      backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.5);
+      transition:transform .5s cubic-bezier(.2,.8,.2,1),background .3s ease;
+    }
+    .gg-gear:hover{ background:linear-gradient(135deg,rgba(255,255,255,.4),rgba(255,255,255,.12)); }
+    .gg-gear:hover svg, .gg-gear.is-open svg{ transform:rotate(60deg); }
+    .gg-gear svg{ transition:transform .5s cubic-bezier(.2,.8,.2,1); }
+
+    .gg-settings-pop{
+      position:absolute;top:calc(100% + 12px);right:0;z-index:40;width:268px;
+      display:flex;flex-direction:column;gap:18px;
+      padding:18px;border-radius:18px;
+      background:var(--page-bg);
+      border:1px solid var(--glass-border);
+      box-shadow:0 24px 60px -22px rgba(0,40,60,.55),inset 0 1px 0 rgba(255,255,255,.4);
+      opacity:0;transform:translateY(-8px) scale(.97);transform-origin:top right;
+      pointer-events:none;transition:opacity .22s ease,transform .22s cubic-bezier(.2,.8,.2,1);
+    }
+    .gg-settings-pop.is-open{ opacity:1;transform:translateY(0) scale(1);pointer-events:auto; }
+    .gg-settings-head{
+      display:flex;align-items:center;justify-content:space-between;
+      font-family:var(--font-display);font-weight:700;font-size:17px;color:var(--ink);
+    }
+    .gg-settings-x{
+      display:grid;place-items:center;width:26px;height:26px;border-radius:8px;border:none;
+      background:color-mix(in srgb,var(--ink) 8%,transparent);color:var(--ink-soft);
+      transition:background .2s ease,color .2s ease;
+    }
+    .gg-settings-x:hover{ background:color-mix(in srgb,var(--ink) 14%,transparent);color:var(--ink); }
+    .gg-settings-group{ display:flex;flex-direction:column;gap:9px; }
+    .gg-dock-label{
+      font-family:var(--font-ui);font-weight:600;font-size:11px;letter-spacing:.13em;
+      text-transform:uppercase;color:var(--ink-faint);white-space:nowrap;
+    }
+    .gg-seg{
+      display:flex;gap:3px;padding:4px;border-radius:13px;
+      background:color-mix(in srgb,var(--ink) 7%,transparent);
+    }
+    .gg-seg-grid{ display:grid;grid-template-columns:1fr 1fr;gap:3px; }
+    .gg-seg-col{ flex-direction:column; }
+    .gg-seg-btn{
+      display:inline-flex;align-items:center;gap:8px;justify-content:flex-start;
+      padding:9px 12px;border:none;border-radius:9px;background:transparent;
+      font-family:var(--font-ui);font-weight:600;font-size:13px;color:var(--ink-soft);
+      transition:background .25s ease,color .25s ease,box-shadow .25s ease;
+    }
+    .gg-seg-col .gg-seg-btn{ justify-content:center; }
+    .gg-seg-btn svg{ flex:none; }
+    .gg-seg-btn:hover{ color:var(--ink); }
+    .gg-seg-btn.is-on{
+      background:var(--glass-bg-strong);color:var(--ink);
+      box-shadow:0 4px 12px -4px rgba(0,40,60,.3),inset 0 1px 0 rgba(255,255,255,.6);
+    }
+    .gg-seg-btn.is-on svg{ color:var(--accent); }
+    @media(max-width:520px){ .gg-settings-pop{ width:min(268px,calc(100vw - 32px)); } }
+
+    .gg-ticker{
+      position:sticky;bottom:0;z-index:14;overflow:hidden;
+      padding:14px 0;
+      background:var(--ticker-bg);
+      border-top:1px solid rgba(255,255,255,.22);
+      box-shadow:0 -10px 34px -18px rgba(0,30,45,.6);
+    }
+    html[data-tod="dawn"] .gg-ticker{
+      border-top-color:rgba(255,220,230,.3);
+      box-shadow:0 -10px 34px -18px rgba(80,30,60,.45);
+    }
+    html[data-tod="dusk"] .gg-ticker{
+      border-top-color:rgba(255,190,140,.25);
+      box-shadow:0 -10px 34px -18px rgba(50,18,45,.65);
+    }
+    html[data-tod="night"] .gg-ticker{
+      border-top-color:var(--glass-border);
+      box-shadow:0 -10px 34px -18px rgba(0,8,24,.8);
+    }
+    .gg-ticker-track{ display:flex;width:max-content;animation:ggticker 42s linear infinite; }
+    @keyframes ggticker{ from{transform:translateX(-50%);} to{transform:translateX(0);} }
+    .gg-ticker-run{ display:flex;flex:none; }
+    .gg-ticker-item{
+      display:inline-flex;align-items:center;gap:12px;padding:0 30px;
+      font-family:var(--font-display);font-weight:600;font-size:18px;font-style:italic;
+      color:#fff;white-space:nowrap;letter-spacing:.01em;
+    }
+    .gg-ticker-star{ font-style:normal;font-size:12px;color:rgba(255,255,255,.7); }
+    @media (prefers-reduced-motion: reduce){ .gg-ticker-track{ animation:none; } }
+
+    .gg-static-banner{
+      position:relative;z-index:5;width:100%;height:clamp(260px,34vh,400px);
+      overflow:hidden;isolation:isolate;
+    }
+    .gg-static-parallax{
+      position:absolute;left:0;right:0;top:0;height:100%;
+    }
+    .gg-static-parallax .gg-scene{ position:absolute;inset:0; }
+    .gg-static-veil{
+      position:absolute;inset:0;z-index:2;pointer-events:none;
+      background:
+        linear-gradient(180deg,rgba(0,20,35,.18) 0%,transparent 30%,transparent 60%,var(--page-bg) 100%);
+    }
+
+    .gg-levels{
+      position:relative;z-index:5;
+      --shallow:clamp(58px,7vw,98px);
+      max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,56px) 80px;
+    }
+    .gg-sec-head{ max-width:760px;margin:0 auto 56px;text-align:center; }
+    .gg-h2{
+      font-family:var(--font-display);font-weight:700;
+      font-size:clamp(34px,5vw,62px);line-height:1.02;letter-spacing:-.012em;
+      margin:18px 0 0;color:var(--ink);text-wrap:balance;
+    }
+    .gg-h2-em{ font-style:italic;font-weight:600;color:var(--accent-deep); }
+    .gg-sec-sub{
+      font-family:var(--font-ui);font-size:clamp(15px,1.4vw,18px);line-height:1.6;
+      margin:20px auto 0;max-width:580px;color:var(--ink-soft);text-wrap:pretty;
+    }
+
+    /* ---- above sea level: the surface scene, the vessel & the surface card ---- */
+    .gg-surface-band{
+      position:relative;z-index:4;
+      width:100vw;left:50%;margin-left:-50vw;
+      padding:clamp(40px,6vw,84px) clamp(20px,4vw,56px) var(--shallow);
+      overflow:hidden;
+    }
+    .gg-surface{ position:absolute;inset:0;z-index:0;pointer-events:none; }
+    /* sky only — the water below the line is the descent gradient itself,
+       so there's no second 'sea' colour to mismatch at the horizon */
+    .gg-surface-sky{ position:absolute;left:0;right:0;top:0;bottom:var(--shallow); }
+    .gg-surface-sky .gg-layer{ position:absolute;inset:0;transition:opacity 1.15s ease; }
+    .gg-surface-haze{
+      position:absolute;left:0;right:0;bottom:0;height:36%;
+      background:linear-gradient(180deg,transparent,rgba(255,255,255,.18));
+      mix-blend-mode:soft-light;
+    }
+    .gg-surface-glow{
+      position:absolute;left:0;right:0;bottom:var(--shallow);height:78px;
+      opacity:.6;pointer-events:none;animation:ggshimmer 5s ease-in-out infinite;
+    }
+    .gg-surface-line{
+      position:absolute;left:0;right:0;bottom:var(--shallow);height:1px;
+      background:linear-gradient(90deg,transparent 12%,rgba(244,252,255,.42) 50%,transparent 88%);
+    }
+
+    .gg-surface-band .gg-sec-head{ position:relative;z-index:2;margin-bottom:0; }
+    .gg-surface-band .gg-eyebrow-dark{ color:rgba(255,255,255,.92); }
+    .gg-surface-band .gg-h2{
+      color:#fff;text-shadow:0 2px 28px rgba(6,26,46,.5),0 1px 4px rgba(6,26,46,.4);
+    }
+    .gg-surface-band .gg-h2-em{ color:#dcf3fc; }
+    .gg-surface-band .gg-sec-sub{
+      color:rgba(255,255,255,.92);text-shadow:0 1px 14px rgba(6,26,46,.45);
+    }
+    /* the harbour: the Introduction card and the vessel, afloat at the surface */
+    .gg-harbor{
+      position:relative;z-index:3;max-width:1000px;
+      margin:clamp(26px,4vw,52px) auto 0;
+      display:flex;align-items:flex-end;
+      min-height:clamp(148px,18vw,196px);
+    }
+    .gg-surfstage{
+      display:block!important;flex:0 1 340px;z-index:3;padding:0!important;
+      margin-bottom:clamp(12px,1.6vw,20px);
+    }
+    .gg-surfstage .gg-stage-side{
+      background:var(--glass-bg-strong);
+      box-shadow:0 28px 60px -26px rgba(0,40,64,.5),inset 0 1px 0 rgba(255,255,255,.6);
+    }
+    .gg-surface-boat{
+      position:absolute;left:50%;bottom:-15px;transform:translateX(-50%);
+      z-index:4;pointer-events:none;
+      filter:drop-shadow(0 8px 12px rgba(0,28,48,.35));
+    }
+    .gg-surface-boat .gg-boat{ position:relative!important;left:auto!important;bottom:auto!important;animation:none!important; }
+    @media(max-width:860px){
+      .gg-harbor{ display:block;min-height:0;padding-bottom:24px;position:static; }
+      .gg-surfstage{ flex:none;margin-bottom:0;max-width:520px; }
+      .gg-surface-band{ padding-bottom:calc(var(--shallow) + 100px); }
+      .gg-surface-boat{ left:50%;right:auto;bottom:calc(var(--shallow) - 12px);top:auto;transform:translateX(-50%); }
+    }
+    /* the depth-0 mooring buoy marks 0 m at the head of the dive line */
+    .gg-pin-buoy{
+      width:20px!important;height:20px!important;border-width:3px!important;
+      background:radial-gradient(circle at 40% 34%,#eafcff,#9bdcef 58%,#3a9ec2)!important;
+      box-shadow:0 0 14px 2px rgba(120,212,242,.6),0 8px 16px -6px rgba(0,30,45,.6)!important;
+    }
+    .gg-road-buoy{
+      left:50%!important;top:2px!important;margin:0!important;transform:translate(-50%,0)!important;
+    }
+    @media(max-width:860px){ .gg-road-buoy{ left:30px!important; } }
+    .gg-grid{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+      perspective:1400px;
+    }
+    @media(max-width:980px){ .gg-grid{ grid-template-columns:repeat(2,1fr); } }
+    @media(max-width:620px){ .gg-grid{ grid-template-columns:1fr; } }
+
+    .gg-card{
+      position:relative;display:flex;flex-direction:column;
+      padding:26px 26px 22px;border-radius:22px;
+      background:var(--glass-bg);
+      border:1px solid var(--glass-border);
+      backdrop-filter:blur(var(--glass-blur)) saturate(150%);-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(150%);
+      box-shadow:var(--glass-shadow),inset 0 1px 0 rgba(255,255,255,.5);
+      transform:perspective(900px);transform-style:preserve-3d;
+      transition:box-shadow .4s ease;
+      will-change:transform;overflow:hidden;
+    }
+    .gg-card:hover{ box-shadow:0 34px 70px -26px rgba(0,55,80,.55),inset 0 1px 0 rgba(255,255,255,.6); }
+    .gg-card-glare{
+      position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;
+      background:radial-gradient(420px circle at var(--gx,50%) var(--gy,0%),rgba(255,255,255,.4),transparent 42%);
+      transition:opacity .4s ease;mix-blend-mode:screen;
+    }
+    .gg-card:hover .gg-card-glare{ opacity:1; }
+    .gg-card>*{ position:relative;transform:translateZ(28px); }
+    .gg-card-glare{ transform:translateZ(40px); }
+
+    .gg-card-top{ display:flex;align-items:center;gap:15px; }
+    .gg-code-chip{
+      position:relative;display:flex;flex-direction:column;justify-content:space-between;
+      width:66px;height:66px;border-radius:16px;padding:9px 10px;flex:none;
+      box-shadow:0 10px 24px -10px rgba(0,50,70,.5),inset 0 1px 0 rgba(255,255,255,.45);
+      color:#0a3d50;
+    }
+    .gg-code-chip.on-dark{ color:#fff; }
+    .gg-code{ font-family:var(--font-display);font-weight:800;font-size:25px;line-height:1; }
+    .gg-depthwave{ align-self:flex-end;opacity:.85; }
+    .gg-card-meta{ display:flex;flex-direction:column;gap:3px; }
+    .gg-level-name{ font-family:var(--font-display);font-weight:700;font-size:20px;color:var(--ink);line-height:1.1; }
+    .gg-level-cefr{ font-family:var(--font-ui);font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint); }
+
+    .gg-card-desc{
+      font-family:var(--font-ui);font-size:15px;line-height:1.55;color:var(--ink-soft);
+      margin:18px 0 0;text-wrap:pretty;
+    }
+    .gg-chips{ display:flex;flex-wrap:wrap;gap:7px;margin-top:16px; }
+    .gg-chip{
+      font-family:var(--font-ui);font-size:12.5px;font-weight:500;color:var(--ink-soft);
+      padding:5px 11px;border-radius:999px;
+      background:var(--chip-bg);border:1px solid var(--hairline);
+    }
+    .gg-depth{ margin-top:20px; }
+    .gg-depth-head{
+      display:flex;justify-content:space-between;align-items:baseline;
+      font-family:var(--font-ui);font-size:12.5px;font-weight:600;color:var(--ink-soft);
+      letter-spacing:.02em;
+    }
+    .gg-depth-m{ color:var(--ink-faint);font-variant-numeric:tabular-nums; }
+    .gg-depth-bar{
+      margin-top:8px;height:6px;border-radius:999px;overflow:hidden;
+      background:color-mix(in srgb,var(--ink) 10%,transparent);
+    }
+    .gg-depth-bar i{ display:block;height:100%;border-radius:999px;
+      transition:width .8s cubic-bezier(.2,.8,.2,1); }
+
+    .gg-card-foot{
+      display:flex;align-items:center;justify-content:space-between;
+      margin-top:22px;padding-top:18px;border-top:1px solid var(--hairline);
+    }
+    .gg-lessons{ font-family:var(--font-ui);font-size:13px;font-weight:600;color:var(--ink-faint); }
+    .gg-card-go{
+      display:inline-flex;align-items:center;gap:7px;
+      font-family:var(--font-ui);font-weight:700;font-size:14px;color:var(--accent-deep);
+      transition:gap .3s ease;
+    }
+    .gg-card-go svg{ transition:transform .3s ease; }
+    .gg-card:hover .gg-card-go svg{ transform:translateX(4px); }
+
+    /* ---- grammar roadmap (winding road) ---- */
+    .gg-roadmap{ position:relative;max-width:1000px;margin:0 auto;padding:8px 0 100px; }
+    /* the dive line / mooring cable descending into the dark */
+    .gg-road{
+      position:absolute;left:50%;top:calc(2px - var(--shallow));bottom:74px;width:3px;transform:translateX(-50%);
+      border-radius:3px;z-index:1;
+      background:linear-gradient(180deg,
+        rgba(190,240,250,.85) 0%, rgba(120,205,228,.72) 20%, rgba(60,150,188,.6) 42%,
+        rgba(42,112,162,.6) 60%, rgba(90,200,232,.78) 82%, rgba(174,246,255,.96) 100%);
+      box-shadow:0 0 12px 1px rgba(120,215,242,.4), 0 0 32px 4px rgba(90,190,228,.18);
+    }
+    .gg-road::before{
+      content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;transform:translateX(-50%);
+      border-radius:2px;
+      background:linear-gradient(180deg,transparent 0%,rgba(224,251,255,.95) 50%,transparent 100%);
+      background-size:100% 38%;background-repeat:no-repeat;
+      animation:ggcablepulse 4.6s ease-in-out infinite;
+    }
+    @keyframes ggcablepulse{ 0%{background-position:0 -42%;} 100%{background-position:0 142%;} }
+    .gg-road-arrow{
+      position:absolute;left:50%;bottom:40px;transform:translateX(-50%);
+      width:15px;height:15px;border-radius:50%;z-index:1;
+      background:radial-gradient(circle at 38% 33%,#d3f8ff,#4bb6db 58%,#1d6f99);
+      box-shadow:0 0 16px 5px rgba(110,212,242,.6), 0 0 44px 11px rgba(80,182,224,.24);
+      animation:ggnode 3.6s ease-in-out infinite;
+    }
+    .gg-road-arrow::after{ content:none; }
+    @keyframes ggnode{
+      0%,100%{ box-shadow:0 0 16px 5px rgba(110,212,242,.55),0 0 44px 11px rgba(80,182,224,.2); }
+      50%{ box-shadow:0 0 24px 7px rgba(150,232,255,.82),0 0 60px 15px rgba(100,202,236,.36); }
+    }
+
+    .gg-stage{
+      position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;
+      column-gap:84px;align-items:start;padding:14px 0;
+    }
+    .gg-stage-side{
+      position:relative;grid-column:1;padding:20px 24px;border-radius:22px;
+      background:var(--glass-bg);border:1px solid var(--glass-border);
+      backdrop-filter:blur(var(--glass-blur)) saturate(150%);-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(150%);
+      box-shadow:var(--glass-shadow),inset 0 1px 0 rgba(255,255,255,.5);
+      transition:box-shadow .4s ease;
+    }
+    .gg-stage-side:hover{ box-shadow:0 30px 60px -26px rgba(0,55,80,.5),inset 0 1px 0 rgba(255,255,255,.6); }
+    .gg-stage[data-side="right"] .gg-stage-side{ grid-column:2; }
+
+    .gg-pin{
+      position:absolute;top:38px;width:56px;height:56px;border-radius:50%;
+      display:grid;place-items:center;z-index:5;
+      color:#fff;font-family:var(--font-display);font-weight:800;font-size:23px;
+      border:4px solid var(--page-bg);
+      box-shadow:0 10px 22px -8px rgba(0,30,45,.6);
+    }
+    .gg-pin::after{ content:"";position:absolute;width:0;height:0; }
+    .gg-stage[data-side="left"] .gg-pin{ left:100%;margin-left:42px;transform:translate(-50%,0); }
+    .gg-stage[data-side="left"] .gg-pin::after{
+      right:100%;top:50%;transform:translateY(-50%);
+      border-top:11px solid transparent;border-bottom:11px solid transparent;
+      border-right:15px solid var(--pin);
+    }
+    .gg-stage[data-side="right"] .gg-pin{ right:100%;margin-right:42px;transform:translate(50%,0); }
+    .gg-stage[data-side="right"] .gg-pin::after{
+      left:100%;top:50%;transform:translateY(-50%);
+      border-top:11px solid transparent;border-bottom:11px solid transparent;
+      border-left:15px solid var(--pin);
+    }
+
+    .gg-stage-head{
+      display:flex;align-items:flex-start;justify-content:space-between;gap:14px;
+      width:100%;background:none;border:0;padding:0;text-align:left;cursor:pointer;
+    }
+    .gg-stage-titles{ display:flex;flex-direction:column;gap:4px;min-width:0; }
+    .gg-stage-kicker{
+      font-family:var(--font-ui);font-weight:700;font-size:11.5px;letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+    .gg-stage-name{
+      margin:0;font-family:var(--font-display);font-weight:700;
+      font-size:clamp(21px,2.4vw,28px);line-height:1.04;color:var(--ink);text-wrap:balance;
+    }
+    .gg-stage-tag{
+      font-family:var(--font-display);font-style:italic;font-weight:500;
+      font-size:15px;color:var(--ink-soft);
+    }
+    .gg-stage-meta{
+      display:flex;align-items:center;gap:8px;margin-top:11px;
+      font-family:var(--font-ui);font-weight:600;font-size:12px;
+      letter-spacing:.02em;color:var(--ink-faint);
+    }
+    .gg-stage-meta svg{ color:var(--pin);opacity:.95;flex:none; }
+    .gg-depth-range{ color:var(--ink-soft);font-variant-numeric:tabular-nums; }
+    .gg-meta-dot{ opacity:.45; }
+    .gg-topic-count{ color:var(--ink-faint); }
+    .gg-stage-chev{
+      flex:none;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;
+      margin-top:3px;color:var(--ink-soft);background:color-mix(in srgb,var(--ink) 8%,transparent);
+      transition:transform .35s cubic-bezier(.2,.8,.2,1),background .25s ease;
+    }
+    .gg-stage.is-open .gg-stage-chev{ transform:rotate(180deg); }
+    .gg-stage-head:hover .gg-stage-chev{ background:color-mix(in srgb,var(--ink) 15%,transparent);color:var(--ink); }
+
+    .gg-stage-panel{
+      display:grid;grid-template-rows:0fr;
+      transition:grid-template-rows .42s cubic-bezier(.2,.8,.2,1);
+    }
+    .gg-stage.is-open .gg-stage-panel{ grid-template-rows:1fr; }
+    .gg-stage-panel-inner{ overflow:hidden;min-height:0; }
+    .gg-stage-desc{
+      margin:16px 0 0;font-family:var(--font-ui);font-size:14.5px;line-height:1.55;
+      color:var(--ink-soft);text-wrap:pretty;
+    }
+    .gg-waypoints{ margin-top:14px;display:flex;flex-direction:column;gap:7px; }
+    .gg-wp{
+      display:flex;align-items:center;gap:12px;padding:9px 13px;border-radius:11px;
+      background:var(--chip-bg);border:1px solid var(--hairline);
+      transition:transform .3s cubic-bezier(.2,.8,.2,1),background .25s ease;
+    }
+    .gg-wp:hover{ transform:translateX(4px);background:var(--glass-bg-strong); }
+    .gg-wp-dot{ flex:none;width:9px;height:9px;border-radius:50%;box-shadow:0 0 0 3px color-mix(in srgb,var(--pin,#3aa6cf) 22%,transparent); }
+    .gg-wp-name{ font-family:var(--font-ui);font-weight:600;font-size:14px;color:var(--ink);line-height:1.25; }
+
+    @media(max-width:860px){
+      .gg-roadmap{ max-width:560px;padding:4px 0 86px; }
+      .gg-road{ left:30px;transform:none; }
+      .gg-road-arrow{ left:30px;transform:translateX(-50%); }
+      .gg-stage{ grid-template-columns:1fr;column-gap:0;padding:9px 0; }
+      .gg-stage-side,
+      .gg-stage[data-side="right"] .gg-stage-side{ grid-column:1;margin-left:64px; }
+      .gg-pin,
+      .gg-stage[data-side="right"] .gg-pin,
+      .gg-stage[data-side="left"] .gg-pin{
+        left:-34px;right:auto;margin:0;transform:translate(-50%,0);
+      }
+      .gg-pin::after,
+      .gg-stage[data-side="right"] .gg-pin::after,
+      .gg-stage[data-side="left"] .gg-pin::after{
+        left:100%;right:auto;top:50%;transform:translateY(-50%);
+        border-top:11px solid transparent;border-bottom:11px solid transparent;
+        border-left:15px solid var(--pin);border-right:0;
+      }
+    }
+
+    .gg-footer{
+      position:relative;z-index:5;
+      background:color-mix(in srgb,var(--ink) 9%,var(--page-bg));
+      border-top:1px solid var(--hairline);
+    }
+    .gg-foot-bottom{
+      max-width:1240px;margin:0 auto;
+      display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+      padding:22px clamp(20px,4vw,56px);
+      font-family:var(--font-ui);font-size:13px;color:var(--ink-faint);
+    }
+
+    /* ============ the descent — underwater content zone ============ */
+    /* pin the content zone to a light "shallow-water" base palette,
+       independent of the hero's time-of-day; deep cards override per-card */
+    .gg-deep{
+      position:relative;
+      --ink:#0a2330; --ink-soft:rgba(10,35,47,.76); --ink-faint:rgba(10,35,47,.56);
+      --glass-bg:rgba(255,255,255,.62); --glass-bg-strong:rgba(255,255,255,.8);
+      --glass-border:rgba(255,255,255,.82); --hairline:rgba(12,60,80,.16);
+      --chip-bg:rgba(255,255,255,.6); --accent-deep:#0c6f8a;
+    }
+    /* the descent gradient takes its hue from the chosen time of day,
+       so the depth of the content zone matches the hero's sky/sea */
+    .gg-deep-bg{
+      position:absolute;inset:0;z-index:0;pointer-events:none;
+    }
+    /* stacked layers so a time-of-day change crossfades smoothly
+       (CSS can't tween between two gradients, so we fade opacity) */
+    .gg-deep-bg-layer{
+      position:absolute;inset:0;opacity:0;
+      transition:opacity 1.1s ease;
+    }
+    /* crossfade driven by the data-tod attribute (set synchronously on toggle),
+       so constant scroll re-renders can never stall the transition */
+    html[data-tod="day"]   .gg-dbg-day,
+    html[data-tod="dawn"]  .gg-dbg-dawn,
+    html[data-tod="dusk"]  .gg-dbg-dusk,
+    html[data-tod="night"] .gg-dbg-night{ opacity:1; }
+    /* gradient stops are tuned to the descent's real depth map:
+       Sunlight Zone sits at ~45%, Twilight Zone at ~63%, then
+       Midnight/Abyssal/Hadal pack into 70–85% and the floor is 100%.
+       Warm light (dawn/dusk) holds through the Sunlight Zone and only
+       breaks to blue at the Twilight Zone; every zone below gets darker. */
+    /* DAY — reference-matched: bright cyan surface, true ocean blue through
+       the sunlit band, dark navy at twilight, near-black through the deep zones */
+    .gg-dbg-day{
+      background:linear-gradient(180deg,
+        #6cc8f0 0%, #2f9ec8 10%, #0e7aa4 20%, #00567e 30%, #00466f 38%,
+        #023a52 44%, #022f44 48%, #02202f 53%, #01131d 59%, #010d15 66%,
+        #00080e 73%, #00050a 80%, #000307 90%, #000204 100%);
+    }
+    /* DAWN — the pink sunrise lingers through the sunlit shallows and
+       only fades to blue around the twilight zone, then deepens to black */
+    .gg-dbg-dawn{
+      background:linear-gradient(180deg,
+        #ffe6da 0%, #fbd9d2 9%, #f3ccca 18%, #e3c0c2 26%, #c8b8bb 33%,
+        #a3a8b0 38%, #8298a6 42%, #5d80a0 45%, #3f5a7a 48%, #264162 52%,
+        #14304a 56%, #0a1d2e 59%, #06141f 64%, #040d18 69%, #020912 75%,
+        #01060d 81%, #000409 90%, #000205 100%);
+    }
+    /* DUSK — warm amber sunset holds through the shallows, then drops
+       to blue around the twilight zone and into the deep */
+    .gg-dbg-dusk{
+      background:linear-gradient(180deg,
+        #ffd9a6 0%, #f7bd8e 9%, #ec9f86 18%, #d99b8e 26%, #bb9a93 33%,
+        #9a9aa0 38%, #7d92a2 42%, #5d80a0 45%, #3f5a7a 48%, #264162 52%,
+        #14304a 56%, #0a1d2e 59%, #06141f 64%, #040d18 69%, #020912 75%,
+        #01060d 81%, #000409 90%, #000205 100%);
+    }
+    /* NIGHT — moonlit blue-teal surface fading to the abyss */
+    .gg-dbg-night{
+      background:linear-gradient(180deg,
+        #1f5560 0%, #184550 10%, #133842 20%, #0d2933 30%, #0a222c 38%,
+        #081a23 44%, #06141b 48%, #050f15 53%, #03090f 59%, #02060a 66%,
+        #010407 73%, #010306 80%, #000204 90%, #000103 100%);
+    }
+    .gg-deep-fx{
+      position:fixed;inset:0;z-index:2;opacity:0;pointer-events:none;
+      transition:opacity .7s ease;
+    }
+    body.gg-diving .gg-deep-fx{ opacity:1; }
+
+    /* god rays — fade out as the light runs out */
+    .gg-rays{ position:absolute;inset:0;opacity:min(calc(var(--dive-p,0) * 14), max(0, calc(.9 - var(--dive-p,0) * 1.85))); }
+    .gg-ray2{
+      position:absolute;top:-14%;width:120px;height:128%;transform-origin:top center;
+      background:linear-gradient(180deg, rgba(215,248,255,.45), rgba(180,238,255,0) 72%);
+      filter:blur(16px);mix-blend-mode:screen;animation:ggray2 9s ease-in-out infinite;
+    }
+    @keyframes ggray2{ 0%,100%{opacity:.55;} 50%{opacity:.95;} }
+
+    /* marine snow — slow drifting particles, only once we're under the surface */
+    .gg-snow{ position:absolute;inset:0;opacity:max(0, min(calc((var(--dive-p,0) - .06) * 5), .8)); }
+    .gg-flake{
+      position:absolute;top:-6vh;border-radius:50%;
+      background:radial-gradient(circle at 34% 30%, #ffffff, rgba(255,255,255,.14));
+      animation:ggfall linear infinite;will-change:transform;
+    }
+    @keyframes ggfall{ 0%{transform:translate(0,-6vh);} 100%{transform:translate(var(--drift,0), 112vh);} }
+
+    /* bioluminescent motes — only alight in the very bottom depths */
+    .gg-bio{ position:absolute;inset:0;opacity:max(0, calc((var(--dive-p,0) - .64) * 3)); }
+    .gg-biodot{
+      position:absolute;border-radius:50%;
+      animation:ggbiopulse ease-in-out infinite, ggbiodrift linear infinite;
+      will-change:transform,opacity;
+    }
+    @keyframes ggbiopulse{ 0%,100%{opacity:.1;} 50%{opacity:1;} }
+    @keyframes ggbiodrift{ 0%{transform:translateY(8px);} 100%{transform:translateY(-34px);} }
+
+    /* deep-sea creatures — anchored to the water column (scroll past them),
+       each drifting horizontally at the depth it belongs to */
+    .gg-deep-life{ position:absolute;left:0;right:0;bottom:0;top:var(--surface-band-h,38%);z-index:1;pointer-events:none;overflow:hidden; }
+    .gg-creature{ position:absolute;will-change:transform; }
+    .gg-swimmer{
+      position:absolute;will-change:transform;
+      animation:ggswim linear infinite;
+      opacity:var(--op,.6);
+    }
+    @keyframes ggswim{
+      from{ transform:translateX(var(--x0,-22vw)) scaleX(var(--sx,1)); }
+      to{ transform:translateX(var(--x1,122vw)) scaleX(var(--sx,1)); }
+    }
+    .gg-swim-inner{ display:block;animation:ggfin var(--bob,7s) ease-in-out infinite; }
+    @keyframes ggfin{ 0%,100%{transform:translateY(0) rotate(-1.4deg);} 50%{transform:translateY(-9px) rotate(1.4deg);} }
+    .gg-glow{ filter:drop-shadow(0 0 5px var(--g,#9fe9f5)); }
+
+    /* pressure vignette deepens with depth */
+    .gg-pressure-vignette{
+      position:absolute;inset:0;opacity:var(--dive-p,0);
+      background:
+        radial-gradient(130% 80% at 50% 38%, transparent 52%, rgba(0,4,12,.55) 100%),
+        linear-gradient(180deg, rgba(0,6,16,.22) 0%, transparent 16%, transparent 74%, rgba(0,3,8,.6) 100%);
+    }
+
+    /* deep (bioluminescent) cards — past the last sunlight */
+    .gg-stage-side.is-deep{ animation:ggdeepglow 6s ease-in-out infinite; }
+    @keyframes ggdeepglow{ 0%,100%{filter:brightness(1);} 50%{filter:brightness(1.06);} }
+    .gg-stage-side.is-deep .gg-pin{
+      box-shadow:0 0 20px 3px color-mix(in srgb, var(--pin) 75%, transparent),
+        0 10px 22px -8px rgba(0,18,38,.75);
+    }
+    .gg-stage-side.is-deep .gg-wp-dot{
+      box-shadow:0 0 0 3px color-mix(in srgb, var(--pin) 26%, transparent),
+        0 0 11px 1px var(--pin);
+    }
+    .gg-stage-side.is-deep .gg-wp:hover{ background:rgba(150,205,240,.12); }
+
+    /* footer rests on the trench floor */
+    .gg-deep .gg-footer{ background:transparent;border-top-color:rgba(150,200,240,.16); }
+    .gg-deep .gg-foot-bottom{ color:rgba(198,220,245,.55); }
+    .gg-deep .gg-foot-bottom a{ color:rgba(216,236,252,.82); }
+
+    @media (prefers-reduced-motion: reduce){
+      .gg-flake,.gg-ray2,.gg-biodot,.gg-creature,.gg-swimmer,.gg-swim-inner,
+      .gg-road::before,.gg-road-arrow,.gg-stage-side.is-deep{ animation:none!important; }
+    }
+    `}</style>
+  );
+}
+
+Object.assign(window, { AppStyles });
+  </script>
+
+  <!-- tweaks-panel: floating tweaks UI -->
+  <script type="text/babel">
+const __TWEAKS_STYLE = `
+  .twk-panel{position:fixed;right:16px;bottom:16px;z-index:2147483646;width:280px;
+    max-height:calc(100vh - 32px);display:flex;flex-direction:column;
+    transform:scale(var(--dc-inv-zoom,1));transform-origin:bottom right;
+    background:rgba(250,249,247,.78);color:#29261b;
+    -webkit-backdrop-filter:blur(24px) saturate(160%);backdrop-filter:blur(24px) saturate(160%);
+    border:.5px solid rgba(255,255,255,.6);border-radius:14px;
+    box-shadow:0 1px 0 rgba(255,255,255,.5) inset,0 12px 40px rgba(0,0,0,.18);
+    font:11.5px/1.4 ui-sans-serif,system-ui,-apple-system,sans-serif;overflow:hidden}
+  .twk-hd{display:flex;align-items:center;justify-content:space-between;
+    padding:10px 8px 10px 14px;cursor:move;user-select:none}
+  .twk-hd b{font-size:12px;font-weight:600;letter-spacing:.01em}
+  .twk-x{appearance:none;border:0;background:transparent;color:rgba(41,38,27,.55);
+    width:22px;height:22px;border-radius:6px;cursor:default;font-size:13px;line-height:1}
+  .twk-x:hover{background:rgba(0,0,0,.06);color:#29261b}
+  .twk-body{padding:2px 14px 14px;display:flex;flex-direction:column;gap:10px;
+    overflow-y:auto;overflow-x:hidden;min-height:0;
+    scrollbar-width:thin;scrollbar-color:rgba(0,0,0,.15) transparent}
+  .twk-body::-webkit-scrollbar{width:8px}
+  .twk-body::-webkit-scrollbar-track{background:transparent;margin:2px}
+  .twk-body::-webkit-scrollbar-thumb{background:rgba(0,0,0,.15);border-radius:4px;
+    border:2px solid transparent;background-clip:content-box}
+  .twk-body::-webkit-scrollbar-thumb:hover{background:rgba(0,0,0,.25);
+    border:2px solid transparent;background-clip:content-box}
+  .twk-row{display:flex;flex-direction:column;gap:5px}
+  .twk-row-h{flex-direction:row;align-items:center;justify-content:space-between;gap:10px}
+  .twk-lbl{display:flex;justify-content:space-between;align-items:baseline;
+    color:rgba(41,38,27,.72)}
+  .twk-lbl>span:first-child{font-weight:500}
+  .twk-val{color:rgba(41,38,27,.5);font-variant-numeric:tabular-nums}
+  .twk-sect{font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+    color:rgba(41,38,27,.45);padding:10px 0 0}
+  .twk-sect:first-child{padding-top:0}
+  .twk-field{appearance:none;box-sizing:border-box;width:100%;min-width:0;height:26px;padding:0 8px;
+    border:.5px solid rgba(0,0,0,.1);border-radius:7px;
+    background:rgba(255,255,255,.6);color:inherit;font:inherit;outline:none}
+  .twk-field:focus{border-color:rgba(0,0,0,.25);background:rgba(255,255,255,.85)}
+  select.twk-field{padding-right:22px;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='rgba(0,0,0,.5)' d='M0 0h10L5 6z'/></svg>");
+    background-repeat:no-repeat;background-position:right 8px center}
+  .twk-slider{appearance:none;-webkit-appearance:none;width:100%;height:4px;margin:6px 0;
+    border-radius:999px;background:rgba(0,0,0,.12);outline:none}
+  .twk-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;
+    width:14px;height:14px;border-radius:50%;background:#fff;
+    border:.5px solid rgba(0,0,0,.12);box-shadow:0 1px 3px rgba(0,0,0,.2);cursor:default}
+  .twk-slider::-moz-range-thumb{width:14px;height:14px;border-radius:50%;
+    background:#fff;border:.5px solid rgba(0,0,0,.12);box-shadow:0 1px 3px rgba(0,0,0,.2);cursor:default}
+  .twk-seg{position:relative;display:flex;padding:2px;border-radius:8px;
+    background:rgba(0,0,0,.06);user-select:none}
+  .twk-seg-thumb{position:absolute;top:2px;bottom:2px;border-radius:6px;
+    background:rgba(255,255,255,.9);box-shadow:0 1px 2px rgba(0,0,0,.12);
+    transition:left .15s cubic-bezier(.3,.7,.4,1),width .15s}
+  .twk-seg.dragging .twk-seg-thumb{transition:none}
+  .twk-seg button{appearance:none;position:relative;z-index:1;flex:1;border:0;
+    background:transparent;color:inherit;font:inherit;font-weight:500;min-height:22px;
+    border-radius:6px;cursor:default;padding:4px 6px;line-height:1.2;overflow-wrap:anywhere}
+  .twk-toggle{position:relative;width:32px;height:18px;border:0;border-radius:999px;
+    background:rgba(0,0,0,.15);transition:background .15s;cursor:default;padding:0}
+  .twk-toggle[data-on="1"]{background:#34c759}
+  .twk-toggle i{position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;
+    background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.25);transition:transform .15s}
+  .twk-toggle[data-on="1"] i{transform:translateX(14px)}
+  .twk-num{display:flex;align-items:center;box-sizing:border-box;min-width:0;height:26px;padding:0 0 0 8px;
+    border:.5px solid rgba(0,0,0,.1);border-radius:7px;background:rgba(255,255,255,.6)}
+  .twk-num-lbl{font-weight:500;color:rgba(41,38,27,.6);cursor:ew-resize;
+    user-select:none;padding-right:8px}
+  .twk-num input{flex:1;min-width:0;height:100%;border:0;background:transparent;
+    font:inherit;font-variant-numeric:tabular-nums;text-align:right;padding:0 8px 0 0;
+    outline:none;color:inherit;-moz-appearance:textfield}
+  .twk-num input::-webkit-inner-spin-button,.twk-num input::-webkit-outer-spin-button{
+    -webkit-appearance:none;margin:0}
+  .twk-num-unit{padding-right:8px;color:rgba(41,38,27,.45)}
+  .twk-btn{appearance:none;height:26px;padding:0 12px;border:0;border-radius:7px;
+    background:rgba(0,0,0,.78);color:#fff;font:inherit;font-weight:500;cursor:default}
+  .twk-btn:hover{background:rgba(0,0,0,.88)}
+  .twk-btn.secondary{background:rgba(0,0,0,.06);color:inherit}
+  .twk-btn.secondary:hover{background:rgba(0,0,0,.1)}
+`;
+
+function useTweaks(defaults) {
+  const [values, setValues] = React.useState(defaults);
+  const setTweak = React.useCallback((keyOrEdits, val) => {
+    const edits = typeof keyOrEdits === 'object' && keyOrEdits !== null
+      ? keyOrEdits : { [keyOrEdits]: val };
+    setValues((prev) => ({ ...prev, ...edits }));
+  }, []);
+  return [values, setTweak];
+}
+
+function TweaksPanel({ title = 'Tweaks', children }) {
+  const [open, setOpen] = React.useState(false);
+  const dragRef = React.useRef(null);
+  const offsetRef = React.useRef({ x: 16, y: 16 });
+  const PAD = 16;
+
+  const clampToViewport = React.useCallback(() => {
+    const panel = dragRef.current;
+    if (!panel) return;
+    const w = panel.offsetWidth, h = panel.offsetHeight;
+    const maxRight = Math.max(PAD, window.innerWidth - w - PAD);
+    const maxBottom = Math.max(PAD, window.innerHeight - h - PAD);
+    offsetRef.current = {
+      x: Math.min(maxRight, Math.max(PAD, offsetRef.current.x)),
+      y: Math.min(maxBottom, Math.max(PAD, offsetRef.current.y)),
+    };
+    panel.style.right = offsetRef.current.x + 'px';
+    panel.style.bottom = offsetRef.current.y + 'px';
+  }, []);
+
+  React.useEffect(() => {
+    if (!open) return;
+    clampToViewport();
+    const ro = new ResizeObserver(clampToViewport);
+    ro.observe(document.documentElement);
+    return () => ro.disconnect();
+  }, [open, clampToViewport]);
+
+  React.useEffect(() => {
+    const onMsg = (e) => {
+      const t = e?.data?.type;
+      if (t === '__activate_edit_mode') setOpen(true);
+      else if (t === '__deactivate_edit_mode') setOpen(false);
+    };
+    window.addEventListener('message', onMsg);
+    window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+    return () => window.removeEventListener('message', onMsg);
+  }, []);
+
+  const dismiss = () => {
+    setOpen(false);
+    window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*');
+  };
+
+  const onDragStart = (e) => {
+    const panel = dragRef.current;
+    if (!panel) return;
+    const r = panel.getBoundingClientRect();
+    const sx = e.clientX, sy = e.clientY;
+    const startRight = window.innerWidth - r.right;
+    const startBottom = window.innerHeight - r.bottom;
+    const move = (ev) => {
+      offsetRef.current = {
+        x: startRight - (ev.clientX - sx),
+        y: startBottom - (ev.clientY - sy),
+      };
+      clampToViewport();
+    };
+    const up = () => {
+      window.removeEventListener('mousemove', move);
+      window.removeEventListener('mouseup', up);
+    };
+    window.addEventListener('mousemove', move);
+    window.addEventListener('mouseup', up);
+  };
+
+  if (!open) return null;
+  return (
+    <>
+      <style>{__TWEAKS_STYLE}</style>
+      <div ref={dragRef} className="twk-panel"
+           style={{ right: offsetRef.current.x, bottom: offsetRef.current.y }}>
+        <div className="twk-hd" onMouseDown={onDragStart}>
+          <b>{title}</b>
+          <button className="twk-x" aria-label="Close tweaks"
+                  onMouseDown={(e) => e.stopPropagation()}
+                  onClick={dismiss}>✕</button>
+        </div>
+        <div className="twk-body">{children}</div>
+      </div>
+    </>
+  );
+}
+
+function TweakSection({ label, children }) {
+  return (
+    <>
+      <div className="twk-sect">{label}</div>
+      {children}
+    </>
+  );
+}
+
+function TweakRow({ label, value, children, inline = false }) {
+  return (
+    <div className={inline ? 'twk-row twk-row-h' : 'twk-row'}>
+      <div className="twk-lbl">
+        <span>{label}</span>
+        {value != null && <span className="twk-val">{value}</span>}
+      </div>
+      {children}
+    </div>
+  );
+}
+
+function TweakSlider({ label, value, min = 0, max = 100, step = 1, unit = '', onChange }) {
+  return (
+    <TweakRow label={label} value={`${value}${unit}`}>
+      <input type="range" className="twk-slider" min={min} max={max} step={step}
+             value={value} onChange={(e) => onChange(Number(e.target.value))} />
+    </TweakRow>
+  );
+}
+
+function TweakRadio({ label, value, options, onChange }) {
+  const trackRef = React.useRef(null);
+  const [dragging, setDragging] = React.useState(false);
+  const valueRef = React.useRef(value);
+  valueRef.current = value;
+
+  const labelLen = (o) => String(typeof o === 'object' ? o.label : o).length;
+  const maxLen = options.reduce((m, o) => Math.max(m, labelLen(o)), 0);
+  const fitsAsSegments = maxLen <= ({ 2: 16, 3: 10 }[options.length] ?? 0);
+
+  if (!fitsAsSegments) {
+    return (
+      <TweakRow label={label}>
+        <select className="twk-field" value={value} onChange={(e) => onChange(e.target.value)}>
+          {options.map((o) => {
+            const v = typeof o === 'object' ? o.value : o;
+            const l = typeof o === 'object' ? o.label : o;
+            return <option key={v} value={v}>{l}</option>;
+          })}
+        </select>
+      </TweakRow>
+    );
+  }
+
+  const opts = options.map((o) => (typeof o === 'object' ? o : { value: o, label: o }));
+  const idx = Math.max(0, opts.findIndex((o) => o.value === value));
+  const n = opts.length;
+
+  const segAt = (clientX) => {
+    const r = trackRef.current.getBoundingClientRect();
+    const inner = r.width - 4;
+    const i = Math.floor(((clientX - r.left - 2) / inner) * n);
+    return opts[Math.max(0, Math.min(n - 1, i))].value;
+  };
+
+  const onPointerDown = (e) => {
+    setDragging(true);
+    const v0 = segAt(e.clientX);
+    if (v0 !== valueRef.current) onChange(v0);
+    const move = (ev) => {
+      if (!trackRef.current) return;
+      const v = segAt(ev.clientX);
+      if (v !== valueRef.current) onChange(v);
+    };
+    const up = () => {
+      setDragging(false);
+      window.removeEventListener('pointermove', move);
+      window.removeEventListener('pointerup', up);
+    };
+    window.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', up);
+  };
+
+  return (
+    <TweakRow label={label}>
+      <div ref={trackRef} role="radiogroup" onPointerDown={onPointerDown}
+           className={dragging ? 'twk-seg dragging' : 'twk-seg'}>
+        <div className="twk-seg-thumb"
+             style={{ left: `calc(2px + ${idx} * (100% - 4px) / ${n})`,
+                      width: `calc((100% - 4px) / ${n})` }} />
+        {opts.map((o) => (
+          <button key={o.value} type="button" role="radio" aria-checked={o.value === value}>
+            {o.label}
+          </button>
+        ))}
+      </div>
+    </TweakRow>
+  );
+}
+
+Object.assign(window, {
+  useTweaks, TweaksPanel, TweakSection, TweakRow, TweakSlider, TweakRadio
+});
+  </script>
+
+  <!-- app: main application shell -->
+  <script type="text/babel">
+/* ============================================================
+   Grammar Gate — app shell, hero, level cards, controls
+   ============================================================ */
+const { useState, useRef, useEffect, useCallback } = React;
+
+function useTilt(max = 9) {
+  const ref = useRef(null);
+  const onMove = useCallback((e) => {
+    const el = ref.current; if (!el) return;
+    const r = el.getBoundingClientRect();
+    const px = (e.clientX - r.left) / r.width;
+    const py = (e.clientY - r.top) / r.height;
+    const ry = (px - 0.5) * 2 * max;
+    const rx = -(py - 0.5) * 2 * max;
+    el.style.transition = "transform .14s ease-out, box-shadow .4s ease";
+    el.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-6px) scale(1.018)`;
+    el.style.setProperty("--gx", `${px * 100}%`);
+    el.style.setProperty("--gy", `${py * 100}%`);
+  }, [max]);
+  const onLeave = useCallback(() => {
+    const el = ref.current; if (!el) return;
+    el.style.transition = "transform .55s cubic-bezier(.2,.8,.2,1), box-shadow .4s ease";
+    el.style.transform = "perspective(900px) rotateX(0) rotateY(0) translateY(0) scale(1)";
+  }, []);
+  return { ref, onMouseMove: onMove, onMouseLeave: onLeave };
+}
+
+const Icon = {
+  dawn: (p) => <svg viewBox="0 0 24 24" width="16" height="16" {...p}><path d="M3 18h18M6 18a6 6 0 0 1 12 0M12 4v3M5 8l2 2M19 8l-2 2M2 14h2M20 14h2" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" /></svg>,
+  day: (p) => <svg viewBox="0 0 24 24" width="16" height="16" {...p}><circle cx="12" cy="12" r="4.4" fill="none" stroke="currentColor" strokeWidth="1.6" /><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M19.4 4.6l-1.7 1.7M6.3 17.7l-1.7 1.7" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" /></svg>,
+  dusk: (p) => <svg viewBox="0 0 24 24" width="16" height="16" {...p}><path d="M3 18h18M7 18a5 5 0 0 1 10 0M12 13V4m0 0l-3 3m3-3l3 3" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" transform="rotate(180 12 11)" /><path d="M3 18h18" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" /></svg>,
+  night: (p) => <svg viewBox="0 0 24 24" width="16" height="16" {...p}><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" /></svg>,
+  arrow: (p) => <svg viewBox="0 0 24 24" width="18" height="18" {...p}><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>,
+  gate: (p) => <svg viewBox="0 0 28 28" width="26" height="26" {...p}><path d="M5 25V9l9-5 9 5v16M5 25h18M9 25V13a5 5 0 0 1 10 0v12M14 13v12" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg>,
+  gear: (p) => <svg viewBox="0 0 24 24" width="18" height="18" {...p}><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" strokeWidth="1.6" /><path d="M12 2.6v2.4M12 19v2.4M21.4 12H19M5 12H2.6M18.6 5.4l-1.7 1.7M7.1 16.9l-1.7 1.7M18.6 18.6l-1.7-1.7M7.1 7.1 5.4 5.4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" /></svg>,
+  close: (p) => <svg viewBox="0 0 24 24" width="16" height="16" {...p}><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" /></svg>
+};
+
+const TOD_OPTS = [
+  { k: "dawn", label: "Dawn" }, { k: "day", label: "Day" },
+  { k: "dusk", label: "Dusk" }, { k: "night", label: "Night" }
+];
+
+const STYLE_OPTS = [
+  { k: "horizon", label: "Calm Horizon" },
+  { k: "voyage", label: "Voyage" },
+  { k: "archipelago", label: "Archipelago" },
+  { k: "beacon", label: "Beacon" },
+  { k: "deep", label: "Deep Current" }
+];
+
+const MTN_OPTS = [
+  { k: "range", label: "Coastal Range" },
+  { k: "alpine", label: "Alpine Peaks" },
+  { k: "volcanic", label: "Volcanic Isles" }
+];
+
+function SettingsMenu({ tod, setTod, sceneStyle, setSceneStyle, mtn, setMtn }) {
+  const [open, setOpen] = useState(false);
+  const wrapRef = useRef(null);
+  useEffect(() => {
+    if (!open) return;
+    const onDoc = (e) => { if (wrapRef.current && !wrapRef.current.contains(e.target)) setOpen(false); };
+    const onKey = (e) => { if (e.key === "Escape") setOpen(false); };
+    document.addEventListener("mousedown", onDoc);
+    document.addEventListener("keydown", onKey);
+    return () => { document.removeEventListener("mousedown", onDoc); document.removeEventListener("keydown", onKey); };
+  }, [open]);
+  return (
+    <div className="gg-settings" ref={wrapRef}>
+      <button className={`gg-gear ${open ? "is-open" : ""}`} aria-label="Display settings"
+        aria-expanded={open} onClick={() => setOpen((o) => !o)}>
+        <Icon.gear />
+      </button>
+      <div className={`gg-settings-pop ${open ? "is-open" : ""}`} role="dialog" aria-label="Display settings">
+        <div className="gg-settings-head">
+          <span>Display</span>
+          <button className="gg-settings-x" aria-label="Close" onClick={() => setOpen(false)}><Icon.close /></button>
+        </div>
+        <div className="gg-settings-group">
+          <span className="gg-dock-label">Time of day</span>
+          <div className="gg-seg gg-seg-grid">
+            {TOD_OPTS.map((o) => {
+              const I = Icon[o.k];
+              return (
+                <button key={o.k} className={`gg-seg-btn ${tod === o.k ? "is-on" : ""}`}
+                  onClick={() => setTod(o.k)} title={o.label}>
+                  <I /><span>{o.label}</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+        <div className="gg-settings-group">
+          <span className="gg-dock-label">Hero style</span>
+          <div className="gg-seg gg-seg-col">
+            {STYLE_OPTS.map((o) =>
+              <button key={o.k} className={`gg-seg-btn ${sceneStyle === o.k ? "is-on" : ""}`}
+                onClick={() => setSceneStyle(o.k)}>{o.label}</button>
+            )}
+          </div>
+        </div>
+        <div className="gg-settings-group">
+          <span className="gg-dock-label">Mountains</span>
+          <div className="gg-seg gg-seg-col">
+            {MTN_OPTS.map((o) =>
+              <button key={o.k} className={`gg-seg-btn ${mtn === o.k ? "is-on" : ""}`}
+                onClick={() => setMtn(o.k)}>{o.label}</button>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Nav({ tod, setTod, sceneStyle, setSceneStyle, mtn, setMtn }) {
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [progress, setProgress] = useState(0);
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 36);
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      setProgress(max > 0 ? Math.min(100, (window.scrollY / max) * 100) : 0);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  useEffect(() => {
+    const onResize = () => { if (window.innerWidth > 860) setMenuOpen(false); };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+  const close = () => setMenuOpen(false);
+  const links = (
+    <React.Fragment>
+      <a href="#levels" onClick={close}>Roadmap</a>
+      <a href="#levels" onClick={close}>Stages</a>
+      <a href="#sources" onClick={close}>Sources</a>
+      <a href="#about" onClick={close}>About</a>
+    </React.Fragment>
+  );
+  return (
+    <nav className={`gg-nav ${scrolled ? "is-scrolled" : ""} ${menuOpen ? "menu-open" : ""}`}>
+      <div className="gg-progress" style={{ width: `${progress}%` }} />
+      <a className="gg-brand" href="#top">
+        <span className="gg-brand-mark"><Icon.gate /></span>
+        <span className="gg-brand-name">Grammar&nbsp;Gate</span>
+      </a>
+      <div className="gg-nav-links">{links}</div>
+      <div className="gg-nav-right">
+        <a href="#" className="gg-signin">Sign in</a>
+        <button className="gg-btn gg-btn-primary gg-btn-sm gg-login">Log in</button>
+        <SettingsMenu tod={tod} setTod={setTod} sceneStyle={sceneStyle} setSceneStyle={setSceneStyle} mtn={mtn} setMtn={setMtn} />
+        <button className="gg-burger" aria-label="Menu" aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((o) => !o)}><span /><span /><span /></button>
+      </div>
+      <div className={`gg-mobile-menu ${menuOpen ? "is-open" : ""}`}>
+        <div className="gg-mobile-links">{links}</div>
+
+      </div>
+    </nav>
+  );
+}
+
+const TICKER_ITEMS = [
+  "Parts of Speech", "Articles", "Tenses", "Gerunds & Infinitives", "Clauses",
+  "Phrasal Verbs", "Collocations", "Appositives", "Inversion", "Figures of Speech",
+  "The Subjunctive", "Parallelism", "Confusable Words", "Idioms & Proverbs"
+];
+
+function Ticker() {
+  const run = (
+    <div className="gg-ticker-run" aria-hidden="true">
+      {TICKER_ITEMS.map((t, i) =>
+        <span className="gg-ticker-item" key={i}>
+          <span className="gg-ticker-star">✦</span>{t}
+        </span>
+      )}
+    </div>
+  );
+  return (
+    <div className="gg-ticker" role="marquee" aria-label="Grammar topics">
+      <div className="gg-ticker-track">{run}{run}</div>
+    </div>
+  );
+}
+
+function Hero({ tod, setTod, sceneStyle, setSceneStyle }) {
+  const startTilt = useTilt(7);
+  const ghostTilt = useTilt(7);
+  return (
+    <header className="gg-hero" id="top">
+      <div className="gg-hero-scene" key={sceneStyle}>
+        <Scene style={sceneStyle} tod={tod} />
+      </div>
+      <div className="gg-hero-veil" />
+      <div className="gg-hero-inner">
+        <div className="gg-eyebrow">
+          <span className="gg-eyebrow-dot" />
+          The English grammar library · from first words to fluent
+        </div>
+        <h1 className="gg-h1">
+          Chart your course<br />through <span className="gg-h1-em">English grammar</span>
+        </h1>
+        <p className="gg-sub">
+          Grammar Gate gathers the web's clearest explanations, examples and exercises —
+          sorted from your first words to fluent mastery, so you always know your next step.
+        </p>
+        <div className="gg-cta-row">
+          <button className="gg-btn gg-btn-primary gg-btn-lg" {...startTilt}
+            onClick={() => document.getElementById("levels").scrollIntoView({ behavior: "smooth" })}>
+            <span>Start learning</span><Icon.arrow />
+          </button>
+          <button className="gg-btn gg-btn-glass gg-btn-lg" {...ghostTilt}
+            onClick={() => document.getElementById("levels").scrollIntoView({ behavior: "smooth" })}>
+            See the roadmap
+          </button>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+const STAGES = [
+  {
+    depth: 0, color: "#e0975a", zone: "Introduction", difficulty: "Start here",
+    range: "Surface", tag: "Get your bearings before the dive.",
+    desc: "How Grammar Gate is organised, how each zone runs deeper than the last, and how to find the right place to begin your descent.",
+    wp: ["How the roadmap works", "Find your starting depth"]
+  },
+  {
+    depth: 1, color: "#19b3c4", zone: "Sunlight Zone", difficulty: "Foundational",
+    range: "0–200 m", tag: "Where the light reaches.",
+    desc: "The load-bearing basics. The parts of speech, how sentences are built and sorted, and the articles, tenses, agreement and punctuation that keep them upright.",
+    wp: ["Parts of Speech", "Sentence Types", "Sentence Structure", "Articles", "Tenses", "Subject and Verb Agreement", "Punctuation Marks (Basic)"]
+  },
+  {
+    depth: 2, color: "#1d86b4", zone: "Twilight Zone", difficulty: "Intermediate",
+    range: "200–1,000 m", tag: "Into the dimming blue.",
+    desc: "The light starts to fade. Reshape sentences with voice, verbals and clauses, and watch how words change form and combine.",
+    wp: ["Voices", "Gerunds & Infinitives", "Comparison", "Clauses", "Word Forms", "Compound Words"]
+  },
+  {
+    depth: 3, color: "#1e5f9c", zone: "Midnight Zone", difficulty: "Advanced",
+    range: "1,000–4,000 m", tag: "Beyond the last sunlight.",
+    desc: "Past the reach of daylight. Causatives, reported speech, phrasal verbs and collocations — plus the confusable words, idioms and common mistakes that trip up most learners.",
+    wp: ["Causative", "Parallelism", "Direct & Indirect Speech", "Appositives", "Phrasal Verbs", "Collocations", "Punctuation Marks (Advanced)", "Common Confusable Words", "Common Idioms & Proverbs", "Common Mistakes I"]
+  },
+  {
+    depth: 4, color: "#1c3f72", zone: "Abyssal Zone", difficulty: "Very Advanced",
+    range: "4,000–6,000 m", tag: "The cold, crushing deep.",
+    desc: "Exacting and unforgiving. Inversion, redundancy and figures of speech, alongside the false friends, rare confusables and fine nuances few ever notice.",
+    wp: ["Word Redundancy", "Inversion", "False Friends & Cognates", "Advanced Idioms & Proverbs", "Figures of Speech", "Rare Confusable Words", "Nuances I", "Common Mistakes II"]
+  },
+  {
+    depth: 5, color: "#122a4d", zone: "Hadal Zone", difficulty: "Expert",
+    range: "6,000 m+", tag: "The bottom of the trench.",
+    desc: "The trench floor, named for Hades himself. The subjunctive, the last nuances, the infamous exceptions and the rare mistakes that separate experts from the merely fluent.",
+    wp: ["Subjunctive", "Nuances II", "Infamous Exceptions", "Rare Mistakes"]
+  }
+];
+
+function Chevron() {
+  return (
+    <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true">
+      <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function Stage({ s, side, isOpen, onToggle, tod }) {
+  const count = s.wp.length;
+  const deep = s.depth >= 3;
+  const pal = deepPal(tod);
+  const col = pal.pin[s.depth] || s.color;
+  const accent = deep ? (pal.acc[s.depth] || col) : col;
+  const sideStyle = { "--pin": col };
+  if (deep) Object.assign(sideStyle, {
+    "--ink": "rgba(226,240,255,.97)", "--ink-soft": "rgba(198,220,245,.76)", "--ink-faint": "rgba(186,210,238,.52)",
+    "--chip-bg": "rgba(140,195,235,.08)", "--hairline": "rgba(150,200,240,.18)",
+    background: "linear-gradient(150deg, rgba(14,32,58,.66), rgba(8,20,40,.5))",
+    borderColor: `color-mix(in srgb, ${col} 50%, rgba(150,210,245,.4))`,
+    boxShadow: `0 24px 60px -26px rgba(0,12,30,.85), 0 0 0 1px color-mix(in srgb, ${col} 26%, transparent), 0 0 36px -6px color-mix(in srgb, ${col} 55%, transparent), inset 0 1px 0 rgba(170,220,250,.14)`
+  });
+  return (
+    <div className={`gg-stage ${isOpen ? "is-open" : ""}`} data-side={side}>
+      <div className={`gg-stage-side ${deep ? "is-deep" : ""}`} style={sideStyle}>
+        <span className={`gg-pin ${s.depth === 0 ? "gg-pin-buoy" : ""}`} style={{ background: col, "--pin": accent }}>{s.depth === 0 ? null : s.depth}</span>
+        <button className="gg-stage-head" aria-expanded={isOpen} onClick={onToggle}>
+          <span className="gg-stage-titles">
+            <span className="gg-stage-kicker" style={{ color: accent }}>Depth {s.depth} · {s.difficulty}</span>
+            <span className="gg-stage-name">{s.zone}</span>
+            <span className="gg-stage-tag">{s.tag}</span>
+            <span className="gg-stage-meta" style={{ "--pin": accent }}>
+              <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M12 3v15m0 0l-5-5m5 5l5-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              <span className="gg-depth-range">{s.range}</span>
+              <span className="gg-meta-dot">·</span>
+              <span className="gg-topic-count">{count} {count === 1 ? "topic" : "topics"}</span>
+            </span>
+          </span>
+          <span className="gg-stage-chev"><Chevron /></span>
+        </button>
+        <div className="gg-stage-panel">
+          <div className="gg-stage-panel-inner">
+            <p className="gg-stage-desc">{s.desc}</p>
+            <div className="gg-waypoints">
+              {s.wp.map((w) =>
+                <div key={w} className="gg-wp">
+                  <span className="gg-wp-dot" style={{ background: accent }} />
+                  <span className="gg-wp-name">{w}</span>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Surface({ tod, mtn }) {
+  return (
+    <div className="gg-surface" aria-hidden="true">
+      <div className="gg-surface-sky">
+        {TOD_KEYS.map((k) =>
+          <div key={k} className="gg-layer" style={{ background: TOD[k].sky, opacity: tod === k ? 1 : 0 }} />
+        )}
+        <Stars tod={tod} />
+        <MountainBackdrop tod={tod} variant={mtn} style={{ bottom: 0, height: "52%" }} />
+        <Clouds tod={tod} />
+        <Birds tod={tod} />
+      </div>
+    </div>
+  );
+}
+
+function SurfaceCard({ s, isOpen, onToggle, tod }) {
+  const count = s.wp.length;
+  const col = deepPal(tod).pin[0] || s.color;
+  return (
+    <div className={`gg-stage gg-surfstage ${isOpen ? "is-open" : ""}`}>
+      <div className="gg-stage-side" style={{ "--pin": col }}>
+        <button className="gg-stage-head" aria-expanded={isOpen} onClick={onToggle}>
+          <span className="gg-stage-titles">
+            <span className="gg-stage-kicker" style={{ color: col }}>Depth {s.depth} · {s.difficulty}</span>
+            <span className="gg-stage-name">{s.zone}</span>
+            <span className="gg-stage-tag">{s.tag}</span>
+            <span className="gg-stage-meta" style={{ "--pin": col }}>
+              <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M12 3v15m0 0l-5-5m5 5l5-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              <span className="gg-depth-range">{s.range}</span>
+              <span className="gg-meta-dot">·</span>
+              <span className="gg-topic-count">{count} {count === 1 ? "topic" : "topics"}</span>
+            </span>
+          </span>
+          <span className="gg-stage-chev"><Chevron /></span>
+        </button>
+        <div className="gg-stage-panel">
+          <div className="gg-stage-panel-inner">
+            <p className="gg-stage-desc">{s.desc}</p>
+            <div className="gg-waypoints">
+              {s.wp.map((w) =>
+                <div key={w} className="gg-wp">
+                  <span className="gg-wp-dot" style={{ background: col }} />
+                  <span className="gg-wp-name">{w}</span>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Levels({ tod, mtn }) {
+  const [open, setOpen] = useState({});
+  const toggle = (i) => setOpen((o) => ({ ...o, [i]: !o[i] }));
+  return (
+    <section className="gg-levels" id="levels">
+      <div className="gg-surface-band">
+        <Surface tod={tod} mtn={mtn} />
+        <div className="gg-sec-head">
+          <span className="gg-eyebrow gg-eyebrow-dark"><span className="gg-eyebrow-dot" />Your grammar roadmap</span>
+          <h2 className="gg-h2">Start at the surface.<br /><span className="gg-h2-em">Dive into the depths.</span></h2>
+          <p className="gg-sec-sub">
+            Six depths, from the sunlit shallows to the hadal trench. Each zone runs deeper and
+            harder than the last — tap any stop to see exactly what you'll learn there.
+          </p>
+        </div>
+        <div className="gg-harbor">
+          <SurfaceCard s={STAGES[0]} isOpen={!!open[0]} onToggle={() => toggle(0)} tod={tod} />
+          <div className="gg-surface-boat" aria-hidden="true">
+            <Sailboat tod={tod} size={92} hull="#bf6a3e" sail="#f2e8d4" />
+          </div>
+        </div>
+      </div>
+      <div className="gg-roadmap">
+        <span className="gg-pin gg-pin-buoy gg-road-buoy" aria-hidden="true" />
+        <span className="gg-road" />
+        {STAGES.map((s, i) =>
+          i === 0 ? null :
+          <Stage key={s.zone} s={s} side={i % 2 === 0 ? "left" : "right"}
+            isOpen={!!open[i]} onToggle={() => toggle(i)} tod={tod} />
+        )}
+        <span className="gg-road-arrow" />
+      </div>
+    </section>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="gg-footer" id="about">
+      <div className="gg-foot-bottom">
+        <span>© {new Date().getFullYear()} Grammar Gate. All rights reserved.</span>
+        <span><a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a></span>
+      </div>
+    </footer>
+  );
+}
+
+const TWEAK_DEFAULTS = {
+  "displayFont": "Playfair Display",
+  "glassBlur": 18
+};
+
+const FONT_STACKS = {
+  "Playfair Display": '"Playfair Display", Georgia, serif',
+  "Cormorant Garamond": '"Cormorant Garamond", Georgia, serif',
+  "DM Serif Display": '"DM Serif Display", Georgia, serif'
+};
+
+const VALID_TOD = ['dawn','day','dusk','night'];
+const VALID_SCENE = ['horizon','voyage','archipelago','beacon','deep'];
+const VALID_MTN = ['range','alpine','volcanic'];
+
+function readPref(key, valid, fallback) {
+  try { const v = localStorage.getItem(key); return v && valid.includes(v) ? v : fallback; } catch(e) { return fallback; }
+}
+function savePref(key, val) { try { localStorage.setItem(key, val); } catch(e) {} }
+
+/* ---- the descent: scroll-driven depth model ---- */
+/* per-time-of-day depth palettes — pin = zone base, acc = bright accent/glow,
+   so the content zone's depth colours track the chosen time of day */
+const DEEP_PAL = {
+  day:   { pin: ["#e0975a", "#19b3c4", "#1d86b4", "#1e5f9c", "#1c3f72", "#122a4d"],
+           acc: ["#e0975a", "#2bbcce", "#37a6c8", "#52b6dd", "#69c8e8", "#8adcf5"] },
+  dawn:  { pin: ["#e08aa6", "#d96f9b", "#bc5d97", "#8f4f8e", "#5f3d6f", "#3a2a52"],
+           acc: ["#f0a0b8", "#ff9ec4", "#f58ad0", "#d98ae0", "#c79bef", "#e6b8ff"] },
+  dusk:  { pin: ["#e0975a", "#d56e6a", "#bd5775", "#8f4a6e", "#5e3a5a", "#382744"],
+           acc: ["#ffb27a", "#ff9e84", "#f5807e", "#e0738f", "#d987b0", "#e6aed8"] },
+  night: { pin: ["#4cc6db", "#3fb4cf", "#2f93b8", "#27719c", "#1f5076", "#163a52"],
+           acc: ["#7fe0ee", "#5fd3e6", "#52b6dd", "#69c8e8", "#8adcf5", "#aef0ff"] }
+};
+const deepPal = (tod) => DEEP_PAL[tod] || DEEP_PAL.day;
+
+function useDeepDive(ref) {
+  const [st, setSt] = useState({ depth: 0, pressure: 1, temp: 23, light: 100, zone: "Surface", zi: 0, visible: false });
+  useEffect(() => {
+    let raf = 0;
+    let last = { depth: -1, zi: -1, visible: null };
+    const ZON = ["Surface", "Sunlight Zone", "Twilight Zone", "Midnight Zone", "Abyssal Zone", "Hadal Zone"];
+    const PIN_D = [0, 120, 600, 2600, 5000, 8200];
+    const lerp = (a, b, t) => a + (b - a) * t;
+    const c01 = (x) => x < 0 ? 0 : x > 1 ? 1 : x;
+    const tempAt = (d) => d <= 1000 ? lerp(23, 4, d / 1000) : d <= 4000 ? lerp(4, 2, (d - 1000) / 3000) : lerp(2, 1.6, c01((d - 4000) / 7000));
+    const lightAt = (d) => d <= 10 ? 100 : d <= 200 ? lerp(62, 6, (d - 10) / 190) : d <= 1000 ? lerp(6, 0, (d - 200) / 800) : 0;
+    const zoneOf = (d) => d <= 5 ? 0 : d <= 200 ? 1 : d <= 1000 ? 2 : d <= 4000 ? 3 : d <= 6000 ? 4 : 5;
+    const root = document.documentElement;
+    const calc = () => {
+      raf = 0;
+      const el = ref.current; if (!el) return;
+      const r = el.getBoundingClientRect();
+      const vh = window.innerHeight, focus = vh * 0.5;
+      const p = c01((focus - r.top) / Math.max(1, r.height));
+      root.style.setProperty("--dive-p", p.toFixed(4));
+      const pins = el.querySelectorAll(".gg-pin");
+      let depth = 0;
+      if (pins.length) {
+        const pts = [];
+        pins.forEach((pn, i) => { const pr = pn.getBoundingClientRect(); pts.push({ y: pr.top + pr.height / 2, d: PIN_D[i] != null ? PIN_D[i] : 8200 }); });
+        pts.push({ y: r.bottom, d: 10994 });
+        if (focus <= pts[0].y) { depth = focus < r.top ? 0 : lerp(0, pts[0].d, c01((focus - r.top) / Math.max(1, pts[0].y - r.top))); }
+        else if (focus >= pts[pts.length - 1].y) { depth = pts[pts.length - 1].d; }
+        else { for (let i = 0; i < pts.length - 1; i++) { if (focus >= pts[i].y && focus <= pts[i + 1].y) { depth = lerp(pts[i].d, pts[i + 1].d, (focus - pts[i].y) / Math.max(1, pts[i + 1].y - pts[i].y)); break; } } }
+      }
+      const visible = r.top < vh * 0.9 && r.bottom > vh * 0.12;
+      const zi = zoneOf(depth);
+      const rd = Math.round(depth);
+      if (visible !== last.visible) document.body.classList.toggle("gg-diving", visible);
+      if (rd !== last.depth || zi !== last.zi || visible !== last.visible) {
+        last = { depth: rd, zi, visible };
+        setSt({
+          depth: rd, pressure: Math.max(1, Math.round(1 + depth / 9.9)),
+          temp: Math.round(tempAt(depth) * 10) / 10, light: Math.max(0, Math.round(lightAt(depth))),
+          zone: ZON[zi], zi, visible
+        });
+      }
+    };
+    const onScroll = () => { if (!raf) raf = requestAnimationFrame(calc); };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    let ro = null;
+    if (window.ResizeObserver && ref.current) { ro = new ResizeObserver(onScroll); ro.observe(ref.current); }
+    calc();
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (ro) ro.disconnect();
+      if (raf) cancelAnimationFrame(raf);
+      document.body.classList.remove("gg-diving");
+    };
+  }, [ref]);
+  return st;
+}
+
+const SNOW = Array.from({ length: 56 }, () => ({
+  x: Math.random() * 100, s: 1 + Math.random() * 3.4,
+  dur: 9 + Math.random() * 16, delay: -Math.random() * 24,
+  drift: (Math.random() * 2 - 1) * 46, blur: Math.random() < 0.45,
+  o: 0.22 + Math.random() * 0.5
+}));
+/* bioluminescent motes — biased toward the very bottom of the screen */
+const BIO = Array.from({ length: 36 }, () => ({
+  x: Math.random() * 100, by: Math.pow(Math.random(), 1.7) * 62,
+  s: 2 + Math.random() * 4.4, p: 3 + Math.random() * 4,
+  d: 9 + Math.random() * 11, delay: -Math.random() * 12
+}));
+
+/* the menagerie — each creature lives in the dive-progress band (lo→hi) that
+   suits its real ocean zone, and drifts horizontally across at that depth.
+   dir 1 = swims right, dir -1 = swims left. zi indexes the depth accent palette. */
+const CREATURES = [
+  /* sunlight zone — just beneath the surface */
+  { kind: "turtle", top: "14%", dir: 1, dur: 82, delay: -10, sc: 1, op: .55, dark: false, zi: 1 },
+  { kind: "school", top: "22%", dir: -1, dur: 56, delay: -24, sc: 1, op: .55, dark: false, zi: 1 },
+  { kind: "tuna", top: "30%", dir: 1, dur: 38, delay: -6, sc: .95, op: .5, dark: false, zi: 1 },
+  /* twilight zone */
+  { kind: "manta", top: "39%", dir: 1, dur: 74, delay: -32, sc: 1.1, op: .54, dark: false, zi: 2 },
+  { kind: "jelly", top: "47%", dir: -1, dur: 92, delay: -12, sc: 1, op: .62, dark: false, zi: 2 },
+  { kind: "squid", top: "55%", dir: 1, dur: 62, delay: -44, sc: .9, op: .54, dark: false, zi: 2 },
+  /* midnight zone */
+  { kind: "jelly", top: "62%", dir: 1, dur: 100, delay: -20, sc: 1.25, op: .6, dark: true, zi: 3 },
+  { kind: "eel", top: "69%", dir: -1, dur: 78, delay: -8, sc: 1, op: .58, dark: true, zi: 3 },
+  { kind: "hatchet", top: "75%", dir: 1, dur: 52, delay: -30, sc: .85, op: .58, dark: true, zi: 3 },
+  /* abyssal zone */
+  { kind: "angler", top: "81%", dir: -1, dur: 108, delay: -12, sc: 1, op: .74, dark: true, zi: 4 },
+  { kind: "viper", top: "87%", dir: 1, dur: 90, delay: -46, sc: .95, op: .68, dark: true, zi: 4 },
+  /* hadal zone — the trench floor */
+  { kind: "dumbo", top: "91%", dir: 1, dur: 96, delay: -16, sc: 1, op: .78, dark: true, zi: 5 },
+  { kind: "glowjelly", top: "95%", dir: -1, dur: 88, delay: -34, sc: 1.1, op: .85, dark: true, zi: 5 },
+  { kind: "isopod", top: "98%", dir: 1, dur: 66, delay: -8, sc: .9, op: .72, dark: true, zi: 5 }
+];
+
+const CREATURE_W = {
+  turtle: 104, school: 120, tuna: 96, manta: 132, jelly: 60, squid: 84,
+  eel: 150, hatchet: 64, angler: 120, viper: 140, dumbo: 96, glowjelly: 64, isopod: 88
+};
+
+function CreatureArt({ kind, body, glow }) {
+  const G = { className: "gg-glow", style: { "--g": glow } };
+  if (kind === "turtle") return (
+    <svg width={CREATURE_W.turtle} viewBox="0 0 104 62">
+      <g fill={body}>
+        <ellipse cx="46" cy="32" rx="28" ry="19" />
+        <path d="M70,32 q15,-4 22,1 q-7,6 -22,4 Z" />
+        <path d="M30,15 Q19,2 11,4 Q21,12 28,22 Z" /><path d="M30,49 Q19,60 11,58 Q21,52 28,42 Z" />
+        <path d="M60,16 Q69,6 77,8 Q69,16 63,24 Z" /><path d="M60,48 Q69,58 77,56 Q69,48 63,40 Z" />
+      </g>
+      <path d="M30,24 q16,-7 32,0 M28,32 h36 M30,40 q16,7 32,0" stroke="rgba(255,255,255,.12)" strokeWidth="1" fill="none" />
+      <circle cx="87" cy="31" r="1.6" fill={glow} {...G} />
+    </svg>
+  );
+  if (kind === "school") return (
+    <svg width={CREATURE_W.school} viewBox="0 0 120 70">
+      {[[14,30],[30,18],[28,44],[46,28],[44,54],[64,20],[62,42],[82,32],[80,56],[100,26]].map(([x,y],i)=>
+        <g key={i} fill={body} transform={`translate(${x},${y})`}>
+          <path d="M0,4 q8,-4 14,0 q-8,4 -14,0 Z" /><path d="M0,4 l-5,-3 l0,6 Z" />
+        </g>)}
+    </svg>
+  );
+  if (kind === "tuna") return (
+    <svg width={CREATURE_W.tuna} viewBox="0 0 96 50">
+      <g fill={body}>
+        <path d="M90,25 C72,8 32,8 14,22 C10,24 10,26 14,28 C32,42 72,42 90,25 Z" />
+        <path d="M14,22 l-12,-7 l3,10 l-3,10 l12,-8 Z" />
+        <path d="M52,12 l9,-7 l-2,10 Z" /><path d="M52,38 l9,7 l-2,-10 Z" />
+      </g>
+      <circle cx="78" cy="22" r="1.8" fill={glow} {...G} />
+    </svg>
+  );
+  if (kind === "manta") return (
+    <svg width={CREATURE_W.manta} viewBox="0 0 132 70">
+      <g fill={body}>
+        <path d="M4,34 Q42,3 66,29 Q90,3 128,34 Q90,40 66,38 Q42,40 4,34 Z" />
+        <path d="M66,38 q-3,22 -11,30 q7,-7 14,-28 Z" />
+        <path d="M58,25 q8,-4 16,0 q-8,3 -16,0 Z" />
+      </g>
+      <circle cx="58" cy="29" r="1.6" fill={glow} {...G} /><circle cx="74" cy="29" r="1.6" fill={glow} {...G} />
+    </svg>
+  );
+  if (kind === "jelly") return (
+    <svg width={CREATURE_W.jelly} viewBox="0 0 60 92">
+      <path d="M4,26 a26,23 0 0 1 52,0 q0,7 -5,8 q-4,-7 -8,0 q-4,-7 -8,0 q-4,-7 -8,0 q-4,-7 -8,0 q-5,-1 -5,-8 z"
+        fill="rgba(150,222,246,.16)" stroke={glow} strokeWidth="1" {...G} />
+      <path d="M14,36 C12,56 16,72 13,86 M24,38 C23,60 27,74 25,88 M36,38 C37,60 33,76 35,88 M46,36 C48,56 44,72 47,86"
+        fill="none" stroke={glow} strokeWidth="1.2" strokeLinecap="round" opacity=".5" />
+      <ellipse cx="30" cy="22" rx="13" ry="7" fill={glow} opacity=".22" {...G} />
+    </svg>
+  );
+  if (kind === "squid") return (
+    <svg width={CREATURE_W.squid} viewBox="0 0 84 60">
+      <g fill={body}>
+        <path d="M8,30 L40,18 Q56,22 58,30 Q56,38 40,42 Z" />
+        <path d="M8,30 l-4,-7 l10,5 Z M8,30 l-4,7 l10,-5 Z" />
+        <path d="M58,24 q11,-3 19,-1 M58,28 q13,-1 21,0 M58,32 q13,1 21,0 M58,36 q11,3 19,2"
+          stroke={body} strokeWidth="2.6" fill="none" strokeLinecap="round" />
+      </g>
+      <circle cx="50" cy="30" r="2.1" fill={glow} {...G} />
+    </svg>
+  );
+  if (kind === "eel") return (
+    <svg width={CREATURE_W.eel} viewBox="0 0 150 46">
+      <g fill={body}>
+        <path d="M4,24 Q40,8 80,22 Q108,32 130,21 Q139,16 145,22 Q149,30 139,30 Q118,34 96,30 Q70,40 40,30 Q18,25 4,24 Z" />
+        <path d="M130,21 q12,-3 16,8 q-10,3 -16,2 Z" />
+      </g>
+      <circle cx="126" cy="22" r="1.6" fill={glow} {...G} />
+    </svg>
+  );
+  if (kind === "hatchet") return (
+    <svg width={CREATURE_W.hatchet} viewBox="0 0 64 50">
+      <g fill={body}>
+        <path d="M54,25 C42,9 22,11 12,22 C8,25 8,26 12,28 C22,40 44,41 54,25 Z" />
+        <path d="M12,22 l-9,-6 l2,9 l-2,9 l9,-6 Z" />
+      </g>
+      <g fill={glow} {...G}><circle cx="22" cy="36" r="1.3" /><circle cx="30" cy="37" r="1.3" /><circle cx="38" cy="36" r="1.3" /></g>
+      <circle cx="46" cy="22" r="1.6" fill={glow} {...G} />
+    </svg>
+  );
+  if (kind === "angler") return (
+    <svg width={CREATURE_W.angler} viewBox="0 0 120 74">
+      <g fill={body}>
+        <path d="M96,40 C86,18 46,16 22,34 C14,40 14,46 22,50 C46,66 84,62 96,46 C100,44 100,42 96,40 Z" />
+        <path d="M22,40 q-16,-3 -20,2 q11,3 20,6 Z" />
+        <path d="M70,30 l9,4 l-9,5 l3,-5 Z" />
+      </g>
+      <path d="M80,26 q7,-16 -4,-20" fill="none" stroke={glow} strokeWidth="1.4" {...G} />
+      <circle cx="76" cy="6" r="4.4" fill={glow} {...G} />
+      <circle cx="66" cy="36" r="2.2" fill={glow} {...G} />
+    </svg>
+  );
+  if (kind === "viper") return (
+    <svg width={CREATURE_W.viper} viewBox="0 0 140 46">
+      <g fill={body}>
+        <path d="M118,23 C100,10 50,12 16,20 C8,22 8,24 16,26 C50,34 100,36 118,23 Z" />
+        <path d="M16,20 l-12,-5 l3,8 l-3,8 l12,-6 Z" />
+        <path d="M110,18 l17,-5 -11,10 Z" />
+      </g>
+      <g fill={glow} {...G}>{[30,44,58,72,86].map((x,i)=><circle key={i} cx={x} cy="30" r="1.2" />)}</g>
+      <circle cx="104" cy="20" r="1.6" fill={glow} {...G} />
+    </svg>
+  );
+  if (kind === "dumbo") return (
+    <svg width={CREATURE_W.dumbo} viewBox="0 0 96 70">
+      <g fill={body}>
+        <ellipse cx="48" cy="30" rx="22" ry="20" />
+        <path d="M27,18 q-17,-12 -23,-2 q11,4 19,12 Z" /><path d="M69,18 q17,-12 23,-2 q-11,4 -19,12 Z" />
+        <path d="M34,48 q-4,16 2,20 M44,50 q-2,16 2,20 M52,50 q2,16 -2,20 M62,48 q4,16 -2,20"
+          stroke={body} strokeWidth="4.4" fill="none" strokeLinecap="round" />
+      </g>
+      <circle cx="40" cy="28" r="2" fill={glow} {...G} /><circle cx="56" cy="28" r="2" fill={glow} {...G} />
+    </svg>
+  );
+  if (kind === "glowjelly") return (
+    <svg width={CREATURE_W.glowjelly} viewBox="0 0 64 92">
+      <ellipse cx="32" cy="26" rx="24" ry="13" fill={glow} opacity=".28" {...G} />
+      <path d="M6,26 a26,23 0 0 1 52,0 q0,7 -5,8 q-4,-7 -8,0 q-4,-7 -8,0 q-4,-7 -8,0 q-4,-7 -8,0 q-5,-1 -5,-8 z"
+        fill="rgba(150,226,248,.2)" stroke={glow} strokeWidth="1.2" {...G} />
+      <path d="M16,38 C14,58 18,74 15,88 M26,40 C25,62 29,76 27,90 M38,40 C39,62 35,76 37,90 M48,38 C50,58 46,74 49,88"
+        fill="none" stroke={glow} strokeWidth="1.3" strokeLinecap="round" opacity=".62" />
+      <g fill={glow} {...G}><circle cx="15" cy="88" r="1.6" /><circle cx="27" cy="90" r="1.6" /><circle cx="37" cy="90" r="1.6" /><circle cx="49" cy="88" r="1.6" /></g>
+    </svg>
+  );
+  if (kind === "isopod") return (
+    <svg width={CREATURE_W.isopod} viewBox="0 0 88 46">
+      <g fill={body}><ellipse cx="44" cy="24" rx="34" ry="14" /><path d="M78,24 q9,-3 7,3 q-2,3 -7,2 Z" /></g>
+      <g stroke="rgba(0,0,0,.25)" strokeWidth="1.4">{[24,34,44,54,64].map((x,i)=><line key={i} x1={x} y1="13" x2={x} y2="35" />)}</g>
+      <g stroke={body} strokeWidth="2" strokeLinecap="round">{[20,30,40,50,60].map((x,i)=><line key={i} x1={x} y1="37" x2={x-3} y2="44" />)}</g>
+      <line x1="11" y1="20" x2="0" y2="12" stroke={body} strokeWidth="1.6" />
+      <circle cx="20" cy="20" r="1.4" fill={glow} {...G} />
+    </svg>
+  );
+  return null;
+}
+
+function Creatures({ tod }) {
+  const pal = deepPal(tod);
+  return (
+    <React.Fragment>
+      {CREATURES.map((c, i) => {
+        const right = c.dir === 1;
+        const glow = pal.acc[c.zi] || pal.acc[0];
+        const body = c.dark ? "rgba(6,15,28,.66)" : "rgba(14,50,72,.5)";
+        return (
+          <div key={i} className="gg-swimmer" aria-hidden="true" style={{
+            top: c.top, "--op": c.op,
+            "--x0": right ? "-24vw" : "122vw", "--x1": right ? "122vw" : "-24vw",
+            "--sx": right ? 1 : -1, "--bob": `${5 + (i % 4)}s`,
+            animationDuration: `${c.dur}s`, animationDelay: `${c.delay}s`
+          }}>
+            <span className="gg-swim-inner">
+              <span style={{ display: "block", transform: `scale(${c.sc})` }}>
+                <CreatureArt kind={c.kind} body={body} glow={glow} />
+              </span>
+            </span>
+          </div>
+        );
+      })}
+    </React.Fragment>
+  );
+}
+
+function Bio({ tod }) {
+  const pal = deepPal(tod);
+  const cols = [pal.acc[5], pal.acc[4], "#7fd0ff", pal.acc[3]];
+  return (
+    <div className="gg-bio" aria-hidden="true">
+      {BIO.map((b, i) => {
+        const col = cols[i % cols.length];
+        return <span key={i} className="gg-biodot" style={{
+          left: `${b.x}%`, bottom: `${b.by}%`, width: b.s, height: b.s,
+          background: col, boxShadow: `0 0 ${b.s * 2.4}px ${b.s * 0.7}px ${col}`,
+          animationDuration: `${b.p}s, ${b.d}s`, animationDelay: `${b.delay}s, ${b.delay}s`
+        }} />;
+      })}
+    </div>
+  );
+}
+
+function Snow() {
+  return (
+    <div className="gg-snow" aria-hidden="true">
+      {SNOW.map((f, i) =>
+        <span key={i} className="gg-flake" style={{
+          left: `${f.x}%`, width: f.s, height: f.s, "--drift": `${f.drift}px`,
+          filter: f.blur ? "blur(1px)" : "none", opacity: f.o,
+          animationDuration: `${f.dur}s`, animationDelay: `${f.delay}s`
+        }} />
+      )}
+    </div>
+  );
+}
+
+function DeepFX({ tod }) {
+  return (
+    <div className="gg-deep-fx" aria-hidden="true">
+      <div className="gg-rays">
+        {[-15, -5, 5, 15].map((d, i) =>
+          <span key={i} className="gg-ray2" style={{ left: `${16 + i * 21}%`, transform: `rotate(${d}deg)`, animationDelay: `${i * 0.9}s` }} />
+        )}
+      </div>
+      <Snow />
+      <Bio tod={tod} />
+      <div className="gg-pressure-vignette" />
+    </div>
+  );
+}
+
+function Deep({ tod, mtn }) {
+  const deepRef = useRef(null);
+  useDeepDive(deepRef);
+  useEffect(() => {
+    const measure = () => {
+      const el = deepRef.current; if (!el) return;
+      const band = el.querySelector('.gg-surface-band');
+      if (band) el.style.setProperty('--surface-band-h', `${band.offsetTop + band.offsetHeight}px`);
+    };
+    measure();
+    window.addEventListener('resize', measure);
+    const ro = window.ResizeObserver ? new ResizeObserver(measure) : null;
+    const band = deepRef.current && deepRef.current.querySelector('.gg-surface-band');
+    if (ro && band) ro.observe(band);
+    return () => { window.removeEventListener('resize', measure); if (ro) ro.disconnect(); };
+  }, []);
+  return (
+    <div className="gg-deep" ref={deepRef}>
+      <div className="gg-deep-bg">
+        {TOD_KEYS.map((k) =>
+          <div key={k} className={`gg-deep-bg-layer gg-dbg-${k}`} />
+        )}
+      </div>
+      <div className="gg-deep-life"><Creatures tod={tod} /></div>
+      <DeepFX tod={tod} />
+      <Levels tod={tod} mtn={mtn} />
+      <Footer />
+
+    </div>
+  );
+}
+
+function App() {
+  const [tod, setTodState] = useState(() => readPref('gg-tod', VALID_TOD, 'day'));
+  const [sceneStyle, setSceneStyleRaw] = useState(() => readPref('gg-scene', VALID_SCENE, 'horizon'));
+  const [mtn, setMtnRaw] = useState(() => readPref('gg-mtn', VALID_MTN, 'range'));
+  const [isTouch, setIsTouch] = useState(false);
+  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  useEffect(() => {
+    const mq = window.matchMedia("(hover: none), (max-width: 760px)");
+    const upd = () => setIsTouch(mq.matches);
+    upd();
+    mq.addEventListener("change", upd);
+    return () => mq.removeEventListener("change", upd);
+  }, []);
+  const setTod = (x) => { setTodState(x); document.documentElement.setAttribute("data-tod", x); savePref('gg-tod', x); };
+  const setSceneStyle = (x) => { setSceneStyleRaw(x); savePref('gg-scene', x); };
+  const setMtn = (x) => { setMtnRaw(x); savePref('gg-mtn', x); };
+  useEffect(() => { document.documentElement.setAttribute("data-tod", tod); }, []);
+  useEffect(() => {
+    const r = document.documentElement.style;
+    r.setProperty("--font-display", FONT_STACKS[t.displayFont] || FONT_STACKS["Playfair Display"]);
+    r.setProperty("--glass-blur", `${t.glassBlur}px`);
+  }, [t.displayFont, t.glassBlur]);
+  return (
+    <React.Fragment>
+      <SceneStyles />
+      <AppStyles />
+      <Nav tod={tod} setTod={setTod} sceneStyle={sceneStyle} setSceneStyle={setSceneStyle} mtn={mtn} setMtn={setMtn} />
+      <Hero tod={tod} setTod={setTod} sceneStyle={sceneStyle} setSceneStyle={setSceneStyle} />
+      <Ticker />
+      <Deep tod={tod} mtn={mtn} />
+      <TweaksPanel>
+        <TweakSection label="Typography" />
+        <TweakRadio label="Display typeface" value={t.displayFont}
+          options={["Playfair Display", "Cormorant Garamond", "DM Serif Display"]}
+          onChange={(v) => setTweak("displayFont", v)} />
+        <TweakSection label="Glass & motion" />
+        <TweakSlider label="Glass blur" value={t.glassBlur} min={4} max={28} step={1} unit="px"
+          onChange={(v) => setTweak("glassBlur", v)} />
+      </TweaksPanel>
+    </React.Fragment>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+</body>
+</html>
